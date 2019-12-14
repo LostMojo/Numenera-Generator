@@ -6,7 +6,6 @@ type_template = {
     "Starting Edge": [0, 0, 0],
     "Weapon Proficiencies": [],
     "Class Skills": [],
-    "Class Inabilities": [],
     "Class Intrusions": {},
     "Cypher Limit": 2,
     "Starting Equipment": [],
@@ -30,13 +29,6 @@ types = {
         "Starting Edge": [1, 1, 0],
         "Weapon Proficiencies": ["Light", "Medium", "Heavy"],
         "Class Skills": ["CHOICE:Physical Skill"],
-        "Abilities": {"Combat Prowess":
-                           "You add +1 damage to one type of attack of your choice: melee attacks or ranged "
-                           "attacks. Enabler.",
-                           "Trained in Armor":
-                           "You can wear armor for long periods of time without tiring and can compensate for "
-                           "slowed reactions from wearing armor. You reduce the Speed Effort cost for wearing "
-                           "armor by 1. Enabler.",},
         "Cypher Limit": 2,
         "Class Intrusions": {"Perfect Setup":
                              "You’re fighting at least three foes and each one is standing in exactly the right "
@@ -56,7 +48,7 @@ types = {
         "Default Cyphers": ["Destiny Nodule", "Rejuvinator"],
         "Default Oddity": "Shifting Blob of Clay",
         "Community Bonus": "",
-        "Connection": "",
+        "Connections": "",
         "Tiers": {
             '1': {"Combat Prowess": "You add +1 damage to one type of attack of your choice: melee attacks or "
                                     "ranged attacks. Enabler.",
@@ -864,7 +856,6 @@ types = {
         "Weapon Proficiencies": ["Light"],
         "Class Skills": ["Crafting Numenera", "CHOICE:Crafting Skill"],
         "Class Inabilities": ["Understanding Numenera", "Salvaging Numenera"],
-        "Core Abilities": {},
         "Cypher Limit": 3,
         "Starting Equipment": [],
         "Default Cyphers": [],
