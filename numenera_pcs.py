@@ -58,13 +58,7 @@ class NumeneraPC(CypherPC):
             # optional default cyphers & oddity?
             self._community_bonus = d["Community Bonus"]
             # pick a connection? self._connections.update(d["Connections"])
-            for num in range(1, self._tier+1):
-                if num <= 6:
-                    if str(num) in self._abilities:
-                        self._abilities[str(num)].update(d["Tiers"][str(num)])
-                    else:
-                        self._abilities[str(num)] = d["Tiers"][str(num)]
-                    # no support for overlevelling
+            self._update_tier_abilities(d["Tiers"])
         else:
             self._type = char_type
             self._reset_character()
@@ -94,19 +88,19 @@ class NumeneraPC(CypherPC):
             self._items += d["Additional Equipment"]
             self._major_effect_suggestions.append(d["Major Effect Suggestions"])
             self._minor_effect_suggestions.append(d["Minor Effect Suggestions"])
-            for num in range(1, self._tier+1):
-                if num <= 6:
-                    if str(num) in self._abilities:
-                        self._abilities[str(num)].update(d["Tiers"][str(num)])
-                    else:
-                        self._abilities[str(num)] = d["Tiers"][str(num)]
-                    # no support for overlevelling
+            self._update_tier_abilities(d["Tiers"])
         else:
             self._reset_character()
             self._focus = focus
 
-    def _update_tier_abilities(self):
-        pass
+    def _update_tier_abilities(self, tier_dictionary):
+        for t in range(1, self._tier+1):
+            if t <= 6:
+                if str(t) in self.abilities():
+                    self._abilities[str(t)].update(tier_dictionary[str(t)])
+                else:
+                    self._abilities[str(t)] = tier_dictionary[str(t)]
+            # no support for over-levelling
 
     def _reset_character(self):
         pass

@@ -15,7 +15,7 @@ def get_difficulty(level=1, mod=0):
 
 def check_roll(level=1, mod=0, add=0):
     # checks whether a Numenera roll succeeds
-    # returns a tuple of success status and raw roll
+    # returns a tuple of success status and raw roll (for nat 1s and 20s)
     result = roll()
     return get_difficulty(level, mod) < result+add, result
 

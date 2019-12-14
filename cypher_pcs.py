@@ -17,7 +17,7 @@ class CypherPC:
     _type_stat_base = [5, 5, 5]
     _assignable_points = 6
     _assigned_points = [0, 0, 0]
-    _other_pool_bonuses = [0, 0, 0 ]
+    _other_pool_bonuses = [0, 0, 0]
 
     _cypher_limit = 1
     _cyphers = {}
