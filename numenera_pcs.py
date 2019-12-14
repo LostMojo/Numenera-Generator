@@ -39,7 +39,7 @@ class NumeneraPC(CypherPC):
     def _configure_character(self):
         self.new_type(self.type())
         self.new_descriptor(self.descriptor())
-        self.new_descriptor(self.focus())
+        self.new_focus(self.focus())
 
     def new_type(self, char_type="Noun"):
         if char_type in data.types:
@@ -80,7 +80,7 @@ class NumeneraPC(CypherPC):
                 self.add_skill(skill)
             for skill in d["Inabilities"]:
                 self.add_hindrance(skill)
-            self._abilities.update(d["Features"])
+            self._abilities['1'].update(d["Features"])        # separate variable for descriptor abilities?
             self._items.append(d["Additional Equipment"])
             # Link to starting adventure?
         else:
@@ -90,16 +90,32 @@ class NumeneraPC(CypherPC):
     def new_focus(self, focus="verbs"):
         if focus in data.foci:
             d = data.foci[focus]
-            self._connections.append(d["Connection"])
-            self._items
+            self._connections.append(d["Connection"])       # appends a choice of connections
+            self._items += d["Additional Equipment"]
+            self._major_effect_suggestions.append(d["Major Effect Suggestions"])
+            self._minor_effect_suggestions.append(d["Minor Effect Suggestions"])
+            for num in range(1, self._tier+1):
+                if num <= 6:
+                    if str(num) in self._abilities:
+                        self._abilities[str(num)].update(d["Tiers"][str(num)])
+                    else:
+                        self._abilities[str(num)] = d["Tiers"][str(num)]
+                    # no support for overlevelling
         else:
             self._reset_character()
             self._focus = focus
+
+    def _update_tier_abilities(self):
+        pass
 
     def _reset_character(self):
         pass
 
 
 if __name__ == "__main__":
-    teddy = NumeneraPC("Theodore", char_type="Glaive", descriptor="Charming", focus="Bears a Halo of Fire")
+    teddy = NumeneraPC("Theodore", char_type="Glaive", tier=6, descriptor="Charming", focus="Bears a Halo of Fire")
     print(teddy.describe())
+    for tier in teddy.abilities():
+        print(str(tier))
+        for key in teddy.abilities()[tier]:
+            print(key)

@@ -1121,7 +1121,7 @@ focus_template = {
     "Core Features": {},
     "Major Effect Suggestions": "",
     "Minor Effect Suggestions": "",
-    "Tier": {
+    "Tiers": {
         '1': {},
         '2': {},
         '3': {},
@@ -1152,21 +1152,24 @@ foci = {
                                          "nothing except the type of damage and the fact that it might start fires."},
         "Major Effect Suggestions": "An important item on the target’s person is destroyed.",
         "Minor Effect Suggestions": "The target or something near the target catches fire.",
-        "Tier": {
-            '1': {"Shroud of Flame (1 Intellect point)":
+        "Tiers": {
+            '1': {"Shroud of Flame":
+                    "(1 Intellect point) "
                     "At your command, your entire body becomes shrouded in flames that last up to ten minutes. The "
                     "fire doesn’t burn you, but it automatically inflicts 2 points of damage to anyone who tries to "
                     "touch you or strike you with a melee attack. Flames from another source can still hurt you. "
                     "While the shroud is active, you gain +2 points of Armor that protect only against damage from "
                     "fire from another source. Enabler."},
-            '2': {"Hurl Flame (2 Intellect points)":
+            '2': {"Hurl Flame":
+                      "(2 Intellect points) "
                       "While your Shroud of Flame is active, you can reach into your halo and hurl a handful of fire "
                       "at a target. This is a ranged attack with short range that deals 4 points of fire damage."
                       " Action.",
                   "Fiery Power": "When you use the Onslaught force blast esotery or the Flash esotery, increase the "
                                  "damage by 1 point.If you don’t have either of those abilities, this ability has no "
                                  "effect.Fiery Power does not affect damage from the Onslaught mindslice. Enabler."},
-            '3': {"CHOICE": {"Fiery Hand of Doom (3 Intellect points)":
+            '3': {"CHOICE": {"Fiery Hand of Doom":
+                                 "(3 Intellect points) "
                                  "While your Shroud of Flame is active, you can reach into your halo and produce a hand"
                                  " made of animate flame that is twice the size of a human’s hand. The hand acts as "
                                  "you direct, floating in the air. Without a command, the hand does nothing. It can "
@@ -1175,21 +1178,25 @@ foci = {
                                  "point of damage per round from the heat. The hand can also attack. It’s a level 3 "
                                  "creature and deals 1 extra point of damage from fire when it attacks. Once created, "
                                  "the hand lasts for ten minutes. Action to create; action to direct.",
-                             "Wings of Fire (4 Intellect points)":
+                             "Wings of Fire":
+                                 " (4 Intellect points)"
                                  "While your Shroud of Flame is active, you can spread wings of fire and can levitate, "
                                  "moving at a rate of up to 20 feet(6 m) per round in any direction for one minute. You"
                                  " can also take one other non- movement action on your turn. Action."}
                   },
-            '4': {"Flameblade (4 Intellect points)":
+            '4': {"Flameblade":
+                      "(4 Intellect points)"
                       "When you wish it, you extend your halo of fire to cover a weapon  you wield in flame for one "
                       "hour. The flame ends if you stop holding or carrying the weapon. While the flame lasts, the "
                       "weapon inflicts 2 additional points of damage. Enabler."},
-            '5': {"Fire Tendrils (5 Intellect points)":
+            '5': {"Fire Tendrils":
+                      "(5 Intellect points)"
                       "When you wish it, your halo sprouts three tendrils of flame that last for up to ten minutes. As "
                       "an action, you can use the tendrils to attack, making a separate attack roll for each. Each "
                       "tendril inflicts 4 points of damage. Otherwise, the attacks function as standard attacks. If "
                       "you don’t use the tendrils to attack, they remain but do nothing. Enabler."},
-            '6': {"CHOICE": {"Fire Servant (6 Intellect points)":
+            '6': {"CHOICE": {"Fire Servant":
+                                 "(6 Intellect points)"
                                  "You reach into your halo and produce an automaton of fire that is your general shape "
                                  "and size. It acts as you direct each round. Directing the servant is an action, and "
                                  "you can command it only when you are within long range of it. Without a command, the "
@@ -1198,7 +1205,8 @@ foci = {
                                  'range until they’re dead." The servant lasts for ten minutes, is a level 5 creature, '
                                  "and deals 1 extra point of damage from fire when it attacks. Action to create; action"
                                  " to direct.",
-                             "Inferno Trail (6 Intellect points)":
+                             "Inferno Trail":
+                                 "(6 Intellect points)"
                                  "For the next minute, you leave a trail of flame in your wake. The trail matches your "
                                  "path and lasts for up to a minute, creating a wall of flame about 6 feet (2 m) high "
                                  "that inflicts 5 points of damage to any creature that passes through it, potentially "
@@ -1229,8 +1237,9 @@ foci = {
                                               "Enabler."},
         "Major Effect Suggestions":"You can take another action on that same turn.",
         "Minor Effect Suggestions":"The range or duration of the mental power is doubled.",
-        "Tier": {
-            '1': {"Telepathic (1+ Intellect points)":
+        "Tiers": {
+            '1': {"Telepathic":
+                      "(1+ Intellect points)"
                       "You can speak telepathically with others who are within short range. Communication is two-way, "
                       "but the other party must be willing and able to communicate. You don’t have to see the target, "
                       "but you must know that it’s within range. You can have more than one active contact at once, "
@@ -1323,7 +1332,7 @@ foci = {
         "Core Features": {},
         "Major Effect Suggestions": "The duration of calmness or control extends to 28 hours.",
         "Minor Effect Suggestions": "The duration of calmness or control is doubled.",
-        "Tier": {
+        "Tiers": {
             '1': {"Beast Companion":
                       "A level 2 creature of your size or smaller accompanies you and follows your instructions. You "
                       "and the GM must work out the details of your creature, and you’ll probably make rolls for it in "
@@ -1387,7 +1396,7 @@ foci = {
                   }}
         }
     },
-    "Controls Gravity":{
+    "Controls Gravity": {
         "Description":
             "Gravity must have been quite a concern for the people of prior epochs because thereare many paths within "
             "the numenera to control it. Through a quirk of fate, some unique device(s), or supreme devotion (or a "
@@ -1459,9 +1468,9 @@ foci = {
                     " ground and can’t move physically under its own power for one minute. The target must be within "
                     "short range. For each level of Effort applied, you can affect one additional creature. Action."
             }}
-        }
+        },
     },
-    "Crafts Illusions":{
+    "Crafts Illusions": {
         "Description": "You use the numenera to create holographic images that appear real. You are, in effect, an "
                        "artist—a crafter of light and sound. Holographic images can never inflict direct harm or exert "
                        "real force, but they can fool creatures, changing opinions and even behaviors if you craft "

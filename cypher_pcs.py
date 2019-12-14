@@ -24,7 +24,7 @@ class CypherPC:
     _artifacts = {}
     _items = []
 
-    _connections = {}
+    _connections = []
     _core_features = {}
     _abilities = {
         '1': {},
