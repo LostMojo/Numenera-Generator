@@ -107,7 +107,7 @@ class NumeneraPC(CypherPC):
 
 
 if __name__ == "__main__":
-    teddy = NumeneraPC("Theodore", char_type="Glaive", tier=6, descriptor="Charming", focus="Bears a Halo of Fire")
+    teddy = NumeneraPC("Theodore", tier=6, char_type="Jack", descriptor="Swift", focus="Controls Beasts")
     print(teddy.describe())
     for tier in teddy.abilities():
         print(str(tier))

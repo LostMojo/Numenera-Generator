@@ -88,7 +88,7 @@ types = {
                                                " Enabler."
             }},
             '2': {"Skill With Attacks":
-                    "Choose one type of attack inwhich you are not already trained: light bashing, light bladed, "
+                    "Choose one type of attack in which you are not already trained: light bashing, light bladed, "
                     "light ranged, medium bashing, medium bladed, medium ranged, heavy bashing, heavy bladed, or "
                     "heavy ranged. You are trained in attacks using that type of weapon. Enabler.",
                   "CHOOSE1": {
@@ -288,6 +288,18 @@ types = {
         "Weapon Proficiencies": ["Light"],
         "Class Skills": ["Understanding Numenera"],
         "Cypher Limit": 3,
+        "Class Intrusions": {"Advantageous Malfunction":
+                                 "A numenera device that is being used against you malfunctions. It might harm the "
+                                 "user or one of their allies for a round, or activate a dramatic and distracting side "
+                                 "effect for a few rounds.",
+                             "Convenient Glimmer":
+                                 "A glimmer provides you with a clear answer or suggests a course of action with "
+                                 "regard to an urgent question, problem, or obstacle you’re facing.",
+                             "Inexplicably Unbroken":
+                                 "An inactive, ruined, or presumed-destroyed device temporarily activates and performs "
+                                 "a useful function relevant to the situation. This is enough to buy you some time for "
+                                 "a better solution, alleviate a complication that was interfering with your "
+                                 "abilities, or just get you one more use out of a depleted cypher or artifact."},
         "Starting Equipment": ["Clothing", "Weapon", "Book About The Numenera", "3 Cyphers", "1 Oddity"],
         "Default Cyphers": ["Gravity Nullifying Spray", "Telepathy Implant", "Teleporter"],
         "Default Oddity": "Infinity Thermos",
@@ -837,6 +849,7 @@ types = {
         "Class Inabilities": ["Understanding Numenera", "Salvaging Numenera", "Crafting Numenera"],
         "Core Abilities": {"Demeanor of Command": ""},
         "Cypher Limit": 2,
+        "Class Intrusions": {},
         "Starting Equipment": [],
         "Default Cyphers": [],
         "Default Oddity": "",
@@ -857,6 +870,7 @@ types = {
         "Class Skills": ["Crafting Numenera", "CHOICE:Crafting Skill"],
         "Class Inabilities": ["Understanding Numenera", "Salvaging Numenera"],
         "Cypher Limit": 3,
+        "Class Intrusions": {},
         "Starting Equipment": [],
         "Default Cyphers": [],
         "Default Oddity": "",
@@ -878,6 +892,7 @@ types = {
         "Class Inabilities": ["Understanding Numenera", "Crafting Numenera"],
         "Core Abilities": {},
         "Cypher Limit": 2,
+        "Class Intrusions": {},
         "Starting Equipment": [],
         "Default Cyphers": ["Phasing Gloves", "Travel Bubble"],
         "Default Oddity": "Shirt that displays your muscles, bones, and internal organs when you wear it",
@@ -1426,7 +1441,7 @@ foci = {
                              "hindering any attempted tasks on their next turn. Action."},
         "Major Effect Suggestions": "The duration of the effect is doubled.",
         "Minor Effect Suggestions": "An important item on the target’s person is destroyed.",
-        "Tier": {
+        "Tiers": {
             '1': {"Hover":
                       "(1 Intellect point) You float slowly into the air. As your action, you can concentrate to remain"
                       " motionless in the air, or float up to a short distance, but no more; otherwise, you drift with "
@@ -1499,7 +1514,7 @@ foci = {
                                     "28 hours.",
         "Minor Effect Suggestions": "Your illusion has a special quality to it—perhaps an observer sees an image of "
                                     "something from their past.",
-        "Tier": {
+        "Tiers": {
             '1': {"Minor Illusion":
                       "(1 Intellect point). You create a single image of a creature or object within immediate range. "
                       "The image must fit within a 10-foot (3 m) cube. The image can move (for example, you could make "
