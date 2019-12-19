@@ -2,7 +2,7 @@
 # Change Abilities so that pool costs are in the description rather than the Key?
 
 type_template = {
-    "Base Stats": [5, 5, 5],
+    "Base Stats": [7, 7, 7],
     "Starting Edge": [0, 0, 0],
     "Weapon Proficiencies": [],
     "Class Skills": [],
@@ -12,7 +12,7 @@ type_template = {
     "Default Cyphers": [],
     "Default Oddity": [],
     "Community Bonus": [],
-    "Connection": "",
+    "Connections": [],
     "Tiers": {
         '1': {},
         '2': {},
@@ -48,7 +48,33 @@ types = {
         "Default Cyphers": ["Destiny Nodule", "Rejuvinator"],
         "Default Oddity": "Shifting Blob of Clay",
         "Community Bonus": "",
-        "Connections": "",
+        "Connections": [
+            "You were in the military and have friends who still serve. Your former commander remembers you well.",
+            "You were the personal guard of a wealthy merchant who accused you of theft. You left her service in "
+            "disgrace.",
+            "You were the bouncer in a local bar for a while, and the patrons there remember you.",
+            "You trained with a highly respected mentor. He regards you well, but he has many enemies.",
+            "You trained in an isolated monastery far away. The monks think of you as a brother, but you’re a "
+            "stranger to all others.",
+            "You have no formal training. Your abilities come to you naturally (or unnaturally).",
+            "You spent time on the streets and even were in prison for a while.",
+            "You were conscripted into military service, but you deserted before long.",
+            "You served as a bodyguard to a powerful criminal who now owes you his life.",
+            "You worked as a constable. Everyone knows you, but their opinions of you vary.",
+            "Your older sibling is an infamous glaive who has been disgraced.",
+            "You served as a caravan guard. You know a smattering of people in many cities and towns.",
+            "Your best friend is a sage and a scholar. She is a great source of knowledge.",
+            "You and a friend both smoke the same kind of rare, expensive tobacco. The two of you get together "
+            "weekly to chat and smoke.",
+            "Your uncle runs a theater in town. You know all the actors and watch all the shows for free.",
+            "Your blacksmith friend sometimes calls on you for help at the forge. However, he pays you well.",
+            "Your mentor wrote a book on the martial arts. Sometimes other warriors seek you out to ask about its "
+            "stranger passages.",
+            "A man you fought alongside in the military is now the mayor of a nearby town.",
+            "You saved the lives of a family when their house burned down. They’re indebted to you, and "
+            "their neighbors regard you as a hero.",
+            "Your old trainer still expects you to come back and sharpen her blades and clean up after her "
+            "classes, but when you do, she occasionally shares interesting rumors."],
         "Tiers": {
             '1': {"Combat Prowess": "You add +1 damage to one type of attack of your choice: melee attacks or "
                                     "ranged attacks. Enabler.",
@@ -304,6 +330,40 @@ types = {
         "Default Cyphers": ["Gravity Nullifying Spray", "Telepathy Implant", "Teleporter"],
         "Default Oddity": "Infinity Thermos",
         "Community Bonus": "",
+        "Connections": [
+            "You served as an apprentice for a nano-sorcerer respected and feared by many people. Now you bear his "
+            "mark.",
+            "You studied in a school infamous for its dark, brooding instructors and graduates.",
+            "You learned nano-sorcery (or gained your modifications) in the temple of an obscure god. Its priests and "
+            "worshippers, although small in number, respect and admire your talents and potential.",
+            "While traveling alone, you saved the life of a powerful abhuman brute. Although unwilling to accompany "
+            "you on your journey, he remains indebted to you.",
+            "Your mother was a powerful nano while she lived, helpful to many locals. They look upon you kindly, but "
+            "they also expect much from you.",
+            "You owe money to a number of people around town and don’t have the funds to pay your debts.",
+            "You failed disgracefully at your initial studies with your teacher and now proceed on your own.",
+            "You learned your skills faster than your teachers had ever seen before. The powers that be took notice "
+            "and are paying close attention.",
+            "You killed a well-known criminal in self-defense, earning the respect of many and the enmity of a "
+            "dangerous few.",
+            "You trained as a glaive, but your skills with the numenera and other types of lore eventually led you "
+            "down a different path. Your former comrades don’t understand you, but they respect you.",
+            "While studying to be a nano, you worked as an assistant for a seamstress, making friends with the owner "
+            "and the clientele.",
+            "Your family owns a large vineyard nearby known to all for its fine wine and fair business dealings.",
+            "You trained for a time with a group of Aeon Priests, and they still look upon you with fondness.",
+            "You worked the gardens in the palace of an influential noble. She wouldn’t remember you, but you made "
+            "friends with her young daughter.",
+            "An experiment you conducted in the past went horribly awry. The locals remember you as a dangerous and "
+            "foolhardy individual.",
+            "You hail from a distant land where you were well known and regarded, but people here treat you with "
+            "suspicion.",
+            "People you meet seem put off by the strange birthmark on your face.",
+            "Your best friend is also a nano. You and she share discoveries and secrets readily.",
+            "You know a local merchant very well. Since you give him so much business, he offers you discounts and "
+            "special treatment.",
+            "You belong to a secretive social club that gathers monthly to drink and talk.",
+        ],
         "Tiers": {
             '1': {"CHOOSE2": {
                 "Hedge Magic":
@@ -529,7 +589,7 @@ types = {
     },
     "Jack": {
         "Base Stats": [10, 10, 10],
-        "Starting Edge": "CHOICE",         #Choice: Add one edge to chosen pool
+        "Starting Edge": "CHOICE",         # Choice: Add one edge to chosen pool
         "Weapon Proficiencies": ["Light", "Medium"],
         "Class Skills": ["CHOICE:Any Skill", "FLEX SKILL"],
         "Class Intrusions": {
@@ -558,6 +618,34 @@ types = {
         "Default Cyphers": ["Machine Control Implant", "Visage Changer"],
         "Default Oddity": "Small Square Stasis Cage",
         "Community Bonus": "",
+        "Connections": [
+            "You come from a large family and had to fend for yourself from an early age.",
+            "Your older sister is a skilled nano. You weren’t able to follow her path, but the numenera is not "
+            "unknown to you.",
+            "You’re a member of a guild of explorers who specialize in uncovering ancient mysteries.",
+            "You worked alongside your father, who was skilled in many things, until he disappeared one day with no "
+            "explanation.",
+            "You grew up on the streets and studied at the school of hard knocks.",
+            "You remember little of your past, which has always seemed strange to you.",
+            "You came of age in the wild and are used to living rough.",
+            "Your family is wealthy but earns little respect from the locals.",
+            "You’re friends with many people in the community and are generally well regarded.",
+            "You have an annoying rival who always seems to get in your way or foil your plans.",
+            "You’re in love with a local shopkeeper, but that person shows little interest in you.",
+            "Several expeditions preparing to explore old ruins and odd mysteries would like you to join them because "
+            "you seem like a promising addition to the team.",
+            "Your best friend from childhood is now an Aeon Priest.",
+            "You come from a nearby community, but the locals consider the folk of your hometown to be untrustworthy "
+            "rivals.",
+            "You’re close friends with a local married couple, both of whom are experienced nanos.",
+            "You’re drinking buddies with a number of the local guards and glaives.",
+            "You once saved the child of a local noble from a fire, and she is very grateful.",
+            "You used to work with a troupe of traveling minstrels and performers, and they remember you fondly "
+            "(as do people in the places you visited).",
+            "You’re wanted for a crime you didn’t commit.",
+            "You have a friend with an extensive library, plenty of food and drink, and a comfortable home—and the "
+            "door is always open to you.",
+        ],
         "Tiers": {
             '1': {"Flex Skill":
                     "At the beginning of each day, choose one task (other than attacks or defense) on which you will "
@@ -854,6 +942,7 @@ types = {
         "Default Cyphers": [],
         "Default Oddity": "",
         "Community Bonus": "",
+        "Connections": [],
         "Tiers": {
             '1': {},
             '2': {},
@@ -875,6 +964,7 @@ types = {
         "Default Cyphers": [],
         "Default Oddity": "",
         "Community Bonus": "",
+        "Connections": [],
         "Tiers": {
             '1': {},
             '2': {},
@@ -897,6 +987,7 @@ types = {
         "Default Cyphers": ["Phasing Gloves", "Travel Bubble"],
         "Default Oddity": "Shirt that displays your muscles, bones, and internal organs when you wear it",
         "Community Bonus": "",
+        "Connections": [],
         "Tiers": {
             '1': {},
             '2': {},
@@ -1568,27 +1659,893 @@ foci = {
             }}
         }
     },
-    "Employs Magnetism": {},
-    "Entertains": {},
-    "Exists Partially Out of Phase": {},
-    "Explores Dark Places": {},
-    "Fights with Panache": {},
-    "Fuses Flesh and Steel": {},
-    "Howls at the Moon": {},
-    "Hunts": {},
-    "Lives in the Wilderness": {},
-    "Masters Defense": {},
-    "Masters Weaponry": {},
-    "Murders": {},
-    "Rages": {},
-    "Rides the Lightning": {},
-    "Speaks With a Silver Tongue": {},
-    "Talks to Machines": {},
-    "Wears a Sheen of Ice": {},
-    "Weilds Power with Precision": {},
-    "Wields Two Weapons at Once": {},
-    "Works the Back Alleys": {},
-    "Works Miracles": {},
+    "Employs Magnetism": {
+        "Description": "Electromagnetism is a fundamental force in the universe, and it is yours to command. You are "
+                       "a master of metal.",
+        "Connection": [
+            "Pick one other PC. Whenever you use your powers, the metallic items on that character’s body shudder, "
+            "rattle, clink, and shake if they are within short range.",
+            "Pick one other PC. You worked together in the past, and the job ended badly.",
+            "Pick two other PCs. While practicing your Diamagnetism ability, you once accidentally sent them "
+            "careening into each other. You’ve never been able to repeat it. Whether you tell them that you’ve been "
+            "trying to replicate the strange effect is up to you.",
+            "Pick one other PC who has metallic elements in their body. You’re afraid to use your magnetism abilities "
+            "near them because you once had a bad experience involving Move Metal and a (probably former) friend’s "
+            "mechanical eyes.",
+        ],
+        "Additional Equipment": [],
+        "Core Features": {},
+        "Major Effect Suggestions": "An important item on the target’s person is destroyed.",
+        "Minor Effect Suggestions": "The duration of the effect is doubled.",
+        "Tiers": {
+            '1': {
+                "Move Metal":
+                      "(1 Intellect point) You can exert force on metal objects within short range for one round. "
+                      "Once activated, your power has an effective Might Pool of 10, a Might Edge of 1, and an Effort "
+                      "of 2 (approximately equal to the strength of a fit, capable, adult human), and you can use it "
+                      "to move metal objects, push against metal objects, and so on. For example, in your round, you "
+                      "could lift and pull a light metal object anywhere within range to yourself or move a heavy "
+                      "object (like a piece of furniture) about 10 feet (3 m). This power lacks the fine control to "
+                      "wield a weapon or move objects with much speed, so in most situations, it’s not a means of "
+                      "attack. You can’t use this ability on your own body. The power lasts for one hour or until its "
+                      "Might Pool is depleted, whichever comes first. Action."},
+            '2': {
+                "Repel Metal":
+                    "By manipulating magnetism, you are trained in Speed defense tasks against any incoming attack "
+                    "that uses metal. Enabler."
+            },
+            '3': {
+                "CHOICE": {
+                    "Destroy Metal":
+                        "(3 Intellect points). You instantly tear, rip, or burst a metal object that is within sight, "
+                        "within short range, and no bigger than half your size. Attempt an Intellect task to destroy "
+                        "the object; the task is eased by three steps compared to breaking it with brute strength. "
+                        "Action.",
+                    "Guide Bolt":
+                        "(4+ Intellect points). When you make an attack with a metallic bolt or metal-tipped arrow on "
+                        "a target within short range,  you can improve the attack’s aim and velocity, which grants an "
+                        "asset to the attack and inflicts an additional 2 points of damage. If you apply a level of "
+                        "Effort, you grant the same benefits to a ranged attack made by an ally within immediate "
+                        "range. In any case, you can use this ability only once per round. Enabler."
+                }
+            },
+            '4': {
+                "Magnetic Field":
+                    "(4 Intellect points). When you wish it, a field of magnetism around you pulls incoming, ranged, "
+                    "metallic projectile attacks (such as arrows, bullets, a thrown metal knife, and so on) to the "
+                    "ground. You are immune to such attacks for one round. You must be aware of an attack to foil it. "
+                    "Enabler."
+            },
+            '5': {
+                "Command Metal":
+                    "(5 Intellect points). You reshape a metallic item as you desire. The item must be within sight "
+                    "and within short range, and its mass can be no greater than your own. You can affect multiple "
+                    "items at once as long as their combined mass falls within these limits. You can fuse multiple "
+                    "items together. You can use this power to destroy a metal object (as the Destroy Metal ability), "
+                    "or you can craft it into another desired shape (crudely, unless you have the proper crafting "
+                    "skills). You can then move the new object anywhere within range. For example, you could take a "
+                    "few metal shields, fuse them together, and use the resulting shape to block a doorway. You can "
+                    "use this ability to make an attack— causing a foe’s armor to constrict, rendering a metal item "
+                    "into shards that you fling across the battlefield, and so on—against one target within short "
+                    "range. Regardless of the form of the attack, it is an Intellect action that deals 7 points of "
+                    "damage. Action."
+            },
+            '6': {
+                "CHOICE": {
+                    "Diamagnetism":
+                        "You magnetize any nonmetallic object within short range so that it can be affected by your "
+                        "other powers. Thus, with Move Metal, you can move any object. With Repel Metal, you are "
+                        "trained in all Speed defense tasks, regardless of whether the incoming attack uses metal. "
+                        "And so on. Enabler.",
+                    "Iron Punch":
+                        "(5+ Intellect points). You pick up a heavy object within short range and hurl it at someone "
+                        "within short range, an Intellect action that deals 6 points of damage to the target and to "
+                        "the hurled object. For each additional level of Effort applied, you can pick up a slightly "
+                        "larger object, allowing you to affect one additional target within short range as long as it "
+                        "is next to the prior target. Action."
+                }
+            }
+        }
+    },
+    "Entertains": {
+        "Description": "You are an entertainer: a singer, dancer, poet, storyteller, or something similar. You "
+                       "perform for the benefit of others. Naturally charismatic and talented, you have also studied "
+                       "to master your art. You know all the old poems, songs, jokes, and stories, and you’re "
+                       "skilled at creating new ones, too.",
+        "Connection": [
+            "Pick one other PC. This character is your worst critic. Your abilities to help or inspire others don’t "
+            "function for them.",
+            "Pick one other PC. They seem to really enjoy your attempts to entertain, and this brings out the "
+            "performer in you. It’s up to that character whether their appreciation is real or they’re just being "
+            "polite.",
+            "Pick one other PC. They are so inspired and put at ease by your stories or other forms of "
+            "entertainment that when you use Levity, they gain +2 to their recovery rolls (instead of +1).",
+            "Pick one other PC. This person knows the secret to one of your favorite forms of entertainment. You "
+            "worry constantly that they will steal it or reveal it."
+        ],
+        "Additional Equipment": ["A Musical Instrument or other tools to perform"],
+        "Core Features": {},
+        "Major Effect Suggestions": "You enchant the target, who remains enchanted as long as you focus all your "
+                                    "attention on keeping them that way.",
+        "Minor Effect Suggestions": "The target is forever favorably disposed toward you.",
+        "Tiers": {
+            '1': {
+                "Levity":
+                    "Through wit, charm, humor, and grace, you are trained in all social interactions other than "
+                    "those involving coercion or intimidation. During rests, you put friends and comrades at ease "
+                    "so much that they gain +1 to their recovery rolls. Enabler."
+            },
+            '2': {
+                "Inspiration":
+                    "Through stories, songs, art, or other forms of entertainment, you inspire your friends. After "
+                    "spending 28 hours with you, once per day each of your friends can ease a task. This benefit is "
+                    "ongoing while you remain in the friend’s company. It ends if you leave, but it resumes if you "
+                    "return to the friend’s company within 28 hours. If you leave the friend’s company for more than "
+                    "28 hours, you must spend another 28 hours together to reactivate the benefit. Enabler."
+            },
+            '3': {
+                "CHOICE": {
+                    "Knowledge": "Your stories and songs contain truth. You are trained in two areas of knowledge of "
+                                 "your choice. Enabler.",
+                    "Multitalented": "Being well versed in how to entertain others is reflected in your growing "
+                                     "capabilities. You gain 6 new points to divide among your stat Pools however you "
+                                     "wish. Enabler."
+                }
+            },
+            '4': {
+                "Calm":
+                    "(3 Intellect points). Through jokes, song, or other art, you prevent a living foe from attacking "
+                    "anyone or anything for one round. Action."
+            },
+            '5': {"Able Assistance": "When you help someone with a task and they apply a level of Effort, they get a "
+                                     "free level of Effort on that task. Enabler."},
+            '6': {
+                "CHOICE": {
+                    "Master Entertainer":
+                        "Your Inspiration ability works more effectively, easing your friends’ tasks by two steps "
+                        "rather than one step. Enabler.",
+                    "Vindictive Performance":
+                        "(5 Intellect points). When you tell a joke, perform a song or poem, draw a picture, relate "
+                        "an anecdote, or otherwise provide entertainment, you can select one individual from the "
+                        "audience who is able to understand you. During your performance, you heap indirect but "
+                        "biting derision on this target. If you succeed, the target doesn’t realize that they’ve "
+                        "become the victim of your performance until you wrap up the entertainment at a moment you "
+                        "choose in a way that strikes home. The target suffers 6 points of Intellect damage (ignores "
+                        "Armor) and loses their next turn. One or more actions to initiate."
+                }
+            }
+        }
+    },
+    "Exists Partially Out of Phase": {
+        "Description": "You have the ability to change your phase state. In fact, you’re always slightly out of phase, "
+                       "giving you a ghostly translucence. With concentration, you can pass your hand through a solid "
+                       "object, allow a solid object to pass harmlessly through you, or literally walk through walls. "
+                       "However, moving in and out of different phase states requires extreme force of will and can "
+                       "be mentally taxing. The explanation for your strange power lies within some aspect of the "
+                       "numenera. Perhaps the ability emerged through the use of (or exposure to) lingering "
+                       "transdimensional technology or as the result of an encounter with a creature not native to "
+                       "this world or dimension. Perhaps one of your ancestors first developed the power and passed it "
+                       "down through generations.",
+        "Connection": [
+            "Pick one other PC. You have known that character for a while, and they helped you gain control of "
+            "your phase states.",
+            "Pick one other PC. Sometime in this character’s past, they had a devastating experience with going out "
+            "of phase. Whether they choose to tell you about it is up to them.",
+            "Pick one other PC. You once accidentally moved your hand right through them. It was an unnerving "
+            "experience for you both.",
+            "Pick two other PCs. They both really want to go out of phase and have been pestering you about it. But "
+            "you’re not convinced they even know what that phrase means."
+        ],
+        "Additional Equipment": [],
+        "Core Features": {},
+        "Major Effect Suggestions": "While out of phase, you are also invisible.",
+        "Minor Effect Suggestions": "While out of phase, you also have an asset to your Speed defense tasks.",
+        "Tiers": {
+            '1': {
+                "Walk Through Walls":
+                    "(2 Intellect points). You can slowly pass through physical barriers at a rate of 1 inch (2.5 cm) "
+                    "per round (minimum of one round to pass through any barrier). You can’t act (other than moving) "
+                    "or perceive anything until you pass entirely through the barrier. You can’t pass through energy "
+                    "barriers. Action."
+            },
+            '2': {
+                "Defensive Phasing":
+                    "(2 Intellect points). You can change your phase so that some attacks pass through you harmlessly. "
+                    "For the next ten minutes, you gain an asset to your Speed defense tasks, but during this time "
+                    "you lose any benefit from armor you wear. Action to initiate."
+            },
+            '3': {
+                "CHOICE": {
+                    "Phased Attack":
+                        "(3 Intellect points). The attack you make on this turn ignores your foe's armor. The ability "
+                        "works for whatever kind of attack you use (melee, ranged, energy, and so on). Enabler.",
+                    "Phase Door":
+                        "(4 Intellect points). You can phase into a solid object’s surface and then phase out of any "
+                        "other solid object within long range of the first, even if the two objects are not connected. "
+                        "There must not be any intervening barriers between the two objects, and you must be aware of "
+                        "or able to see the destination object. Action."
+                }
+            },
+            '4': {
+                "Ghost": "(4 Intellect points). For the next ten minutes, you gain an asset to sneaking tasks. During "
+                         "this time, you can move through solid barriers (but not energy barriers) at a rate of 1 foot "
+                         "(30 cm) per round, and you can perceive while phased within a barrier or object, which "
+                         "allows you to peek through walls. Action to initiate."
+            },
+            '5': {"Untouchable":
+                      "(6 Intellect points). You change your phase state for the next minute so that you can’t affect "
+                      "or be affected by normal matter or energy. Only mental attacks and special transdimensional "
+                      "energies, devices, orabilities can affect you, but likewise you can’t attack, touch, or "
+                      "otherwise affect anything. Action to initiate."},
+            '6': {"CHOICE": {
+                "Enhanced Phased Attack":
+                    "(5 Intellect points). This ability works like the third-tier Phased Attack ability except that "
+                    "your attack also disrupts the foe’s vitals, dealing an additional 5 points of damage. Enabler.",
+                "Phase Foe":
+                    "(6+ Intellect points). You gather disrupting energy in your fingertip and touch a creature. If "
+                    "the target is an NPC or a creature of level 3 or lower, it becomes phased as if it had used your "
+                    "Ghost ability. However, unless it can figure out how to control its movement while being phased, "
+                    "which most creatures have no experience with, it begins to sink through solid matter. If it can’t "
+                    "control itself or end the effect, it might be gone for good because when it becomes solid again "
+                    "after ten minutes, it’s probably deep in the earth. For each additional level of Effort you "
+                    "apply, you can attempt to affect a target of one level higher. Action."
+            }}
+        }
+    },
+    "Explores Dark Places": {
+        "Description": "You explore the foreboding ruins and mysterious locales of the ancient eras, trained in such "
+                       "activities by those who have gone before you. You’re the archetypical treasure hunter, "
+                       "scavenger, and finder of lost things. You spend so much of your time in the dark that you "
+                       "slowly adapt to it, almost becoming a creature of the gloom yourself. Even in civilized areas, "
+                       "you prefer to keep to the shadows.",
+        "Connection": [
+            "Pick one other PC. This character was your companion on previous expeditions, and the two of you work "
+            "so well together that you both gain an asset to any die rolls to collaborate on the same task, fight the "
+            "same foe, and so on.",
+            "Pick two other PCs. You think you once saw them through a keyhole doing something illegal. You can "
+            "choose whether or not to share that information. The characters can choose whether it was really them "
+            "(it could have been neither, one, or both), and they may or may not share that information in return.",
+            "Pick one other PC. This person always seems to hear you, no matter how stealthy you try to be.",
+            "Pick one other PC. This character is so loud in everything they do that you feel obligated to try to "
+            "help them learn to move more quietly through the world. Whether or not they’re interested is up to them."
+        ],
+        "Additional Equipment": ["Explorer's pack"],
+        "Core Features": {"Darkness Powers":
+                              "Your special abilities (such as Nano esoteries) make almost no sound, and whatever "
+                              "visual displays they produce are dark and shadowy. These alterations change nothing "
+                              "other than the appearance of the effects. A Flash esotery is a silent burst of shadows, "
+                              "a Barrier esotery is a mass of shadowy wisps, and so on."},
+        "Major Effect Suggestions": "The target is also stunned and loses its next turn.",
+        "Minor Effect Suggestions": "The target is also dazed for one round, during which time all of its tasks "
+                                    "are hindered.",
+        "Tiers": {
+            '1': {"Superb Explorer": "You are trained in searching, listening, climbing, balancing, and jumping "
+                                     "tasks. Enabler."},
+            '2': {
+                "Superb Infiltrator": "You are trained in lockpicking and tinkering with devices in an effort to make "
+                                      "them work, or at least work for you. Enabler.",
+                "Eyes Adjusted": "You can see in extremely dim light as though it were bright light. You can see in "
+                                 "total darkness as if it were extremely dim. Enabler."
+            },
+            '3': {"CHOICE": {
+                "Nightstrike": "When you attack a foe in dim light or darkness, you get a free level of Effort on "
+                               "the attack. Enabler.",
+                "Slippery Customer": "When you apply Effort to tasks involving escaping from bonds, fitting in tight "
+                                     "spaces, and other contortionist tasks, you get a free level of Effort on the "
+                                     "task. Thanks to your experience, you are also trained in Speed defense tasks "
+                                     "while wearing light armor or no armor. Enabler."
+            }},
+            '4': {
+                "Resilient": "In your explorations of dark places, you’ve been exposed to all sorts of terrible "
+                             "things and are developing a general resistance. You gain +1 to Armor and are trained "
+                             "in Might defense tasks. Enabler."
+            },
+            '5': {"Dark Explorer": "You ignore penalties for any action (including fighting) in extremely dim light "
+                                   "or in cramped spaces. Combined with your Eyes Adjusted ability, you can act "
+                                   "without penalty even in total darkness. You are trained in sneaking tasks while "
+                                   "in dim or no light. Enabler."},
+            '6': {"CHOICE": {
+                "Blinding Attack":
+                    "(3 Speed points). If you have a source of light, you can use it to make a melee attack against "
+                    "a target. If successful, the attack deals no damage, but the target is blinded for one "
+                    "minute. Action.",
+                "Embraced by Darkness":
+                    "(6 Intellect points). For the next hour, you take on some characteristics of a shadow thanks to "
+                    "a fundamental adaptation of your flesh or a device you’ve kept secret. Your appearance is a "
+                    "dark silhouette. When you apply a level of Effort to sneaking tasks, you get a free level of "
+                    "Effort on the task. During this time, you can move through the air at a rate of a short distance "
+                    "per round, and you can move through solid barriers (even those that are sealed to prevent the "
+                    "passage of light or shadow), but not energy barriers, at a rate of 1 foot (30 cm) per round. "
+                    "You can perceive while passing through a barrier or object, which allows you to peek through "
+                    "walls. As a shadow, you can’t affect or be affected by normal matter. Likewise, you can’t attack, "
+                    "touch, or otherwise affect anything. However, attacks and effects that rely on light can affect "
+                    "you, and sudden bursts of light can potentially make you lose your next turn. Action to initiate."
+            }}
+        }
+    },
+    "Fights with Panache": {
+        "Description": "You know that style is at least as important as substance. Defeating foes is secondary to "
+                       "looking good while doing it. Some might call you a swashbuckler or daredevil. You leap through "
+                       "the air, make a flourish with your weapon, and attack, usually with a clever, biting show of "
+                       "wit. Your enemies hate you, but your allies adore you. Just watching you fight is "
+                       "entertaining.",
+        "Connection": [
+            "Pick one other PC. You’re always trying to impress this character with your skill, wit, appearance, or "
+            "bravado. Perhaps they are a rival, perhaps you need their respect, or perhaps you’re romantically "
+            "interested in them.",
+            "Pick one other PC. This character seems to anticipate your next move almost before you even begin it. "
+            "When they collaborate with you on the same task or fight the same foe, you gain an asset on the task.",
+            "Pick one other PC. You fear that the character is jealous of your abilities and worry that it might "
+            "lead to problems.",
+            "Pick one other PC. This character is so enamored of your swashbuckling, entertaining ways during combat "
+            "that they sometimes forget to take their own action."
+        ],
+        "Additional Equipment": ["Extremely Stylish Clothes", "A Jeweled Weapon"],
+        "Core Features": {},
+        "Major Effect Suggestions": "Make an additional attack with your weapon on your turn.",
+        "Minor Effect Suggestions": "The target is so dazzled by your style that it is dazed for one round, during "
+                                    "which time all of its tasks are hindered.",
+        "Tiers": {
+            '1': {
+                "Attack Flourish":
+                    'With your attack, you add stylish moves, entertaining quips, or a certain "something" that '
+                    'entertains or impresses others. One creature you choose within short range who can see you gains '
+                    'an asset to its next task if taken within a round or two. Enabler.'
+            },
+            '2': {
+                "Quick Block": "If you use a light or medium weapon, you are trained in Speed defense tasks. Enabler."
+            },
+            '3': {"CHOICE": {
+                "Acrobatic Attack":
+                    "(1+ Speed points). You leap into the attack, twisting or flipping through the air. If you roll a "
+                    "natural 17 or 18, you can choose to have a minor effect rather than deal extra damage. If you "
+                    "apply Effort to the attack, you get a free level of Effort on the task. You can’t use this "
+                    "ability if your Speed is reduced from wearing armor. Enabler.",
+                "Flamboyant Boast":
+                    "(1 Intellect point). You boastfully describe an act that you will accomplish, and then as part "
+                    "of the same action, you attempt it. If an average person would find the action difficult "
+                    "(or impossible) and you succeed on it, creatures who witnessed it who are not your allies are "
+                    "potentially dazed on their next turn, and all tasks they attempt are hindered. The GM will help "
+                    "you determine whether your boast is something that would impress onlookers so significantly. If "
+                    "you attempt the task you boast about but fail to accomplish it, all your attempts to affect or "
+                    "attack onlookers who saw you are hindered for about ten minutes. Enabler."
+            }},
+            '4': {
+                "Mobile Fighter":
+                    "(3 Speed points). As part of your attack, you can leap on or over obstacles, swing from ropes, "
+                    "run along narrow surfaces, or otherwise move around the battlefield at your normal speed as if "
+                    "such tasks were routine (difficulty 0). You can’t use this ability if your Speed is reduced "
+                    "from wearing armor. Enabler."
+            },
+            '5': {
+                "Block for Another":
+                    "If you use a light or medium weapon, you can block attacks made against an ally "
+                    "near you. Choose one creature within immediate range. You provide an asset to that creature’s "
+                    "Speed defense tasks. You can’t use Quick Block while using Block for Another. Enabler."
+            },
+            '6': {"CHOICE": {
+                "Agile Wit":
+                    "When attempting a Speed task, you instead can roll (and spend points) as if it were an Intellect "
+                    "action. If you apply Effort to this task, you can spend points from your Intellect Pool instead "
+                    "of your Speed Pool (in which case you also use your Intellect Edge instead of your Speed Edge). "
+                    "Enabler.",
+                "Return to Sender":
+                    "(3 Speed points). If you succeed at a Speed defense task against a melee attack, you can make an "
+                    "immediate melee attack against your foe. You can use this ability only once per round. Enabler."
+            }}
+        }
+    },
+    "Focuses Mind Over Matter": {
+        "Description": "Telekinesis. Psychokinesis. Mind over matter. The power has many names, but in the end, it "
+                       "all boils down to one thing—the molecules that make up all matter are yours to command. You "
+                       "likely call yourself a telekinetic or just a TK.",
+        "Connection": [
+            "Pick one other PC. This character can cause your telekinetic powers to act oddly. Every once in a while, "
+            "if the character stands directly next to you, your powers are canceled, but at other times, they seem "
+            "improved when used near the PC.",
+            "Pick one other PC. This person thinks that your powers are completely hypothetical.",
+            "Pick one other PC. You once joked that you could read their mind. Whether they found that exciting or "
+            "utterly terrifying is up to them.",
+            "Pick one other PC. You feel strangely protective of that character and plan to do your best to keep "
+            "them from harm."
+        ],
+        "Additional Equipment": [],
+        "Core Features": {
+            "Mental Powers": "Your special abilities that would normally use force or other energy instead use "
+                             "psychokinetic force. For example, a Flash or an Onslaught force blast is a psychokinetic "
+                             "blast from your mind. This alteration changes nothing except that you don’t need a free "
+                             "hand to perform those abilities. In addition, you can choose to learn Impetus instead of "
+                             "one of the abilities granted by your type. Enabler.",
+            "ADDITIONAL ABILITIY CHOICE": {
+                "Impetus":
+                    "(2 Intellect points): A loose object within short range that you could carry in one hand is "
+                    "drawn to your free hand. If the object is stuck or held by another creature, you must succeed on "
+                    "a Might roll to rip it free, or the object remains where it was. Action."
+            }
+        },
+        "Major Effect Suggestions": "You can move or affect twice as much as normal.",
+        "Minor Effect Suggestions": "An object moves faster or more efficiently.",
+        "Tiers": {
+            '1': {
+                "Deflect Attacks":
+                    "(1 Intellect point). Using your mind, you protect yourself from incoming attacks. For the next "
+                    "ten minutes, you are trained in Speed defense tasks. Action to initiate."
+                  },
+            '2': {
+                "Telekinesis":
+                    "(2 Intellect points). You can exert force on objects within short range. Once activated, your "
+                    "power has an effective Might Pool of 10, a Might Edge of 1, and an Effort of 2 (approximately "
+                    "equal to the strength of a fit, capable, adult human), and you can use it to move objects, push "
+                    "against objects, and so on. For example, you could lift and pull a light object anywhere within "
+                    "range to yourself or move a heavy object (like a piece of furniture) about 10 feet (3 m). This "
+                    "power lacks the fine control to wield a weapon or move objects with much speed, so in most "
+                    "situations, it’s not a means of attack. You can’t use this ability on your own body. The power "
+                    "lasts for one hour or until its Might Pool is depleted, whichever comes first. Action."
+            },
+            '3': {"CHOICE":{
+                "Cloak of Opportunity":
+                    "(5 Intellect points). You set small objects from the environment (rocks, broken cyphers, clumps "
+                    "of drit, and so on) swirling about you for up to ten minutes, which grants you +2 Armor. "
+                    "Action to initiate.",
+                "Enhance Strength":
+                    "(3 Intellect points). For the next ten minutes, you gain an asset on tasks that depend on brute "
+                    "force, such as moving a heavy object, smashing down a door, or hitting someone with a melee "
+                    "weapon. Action to initiate.",
+            }},
+            '4': {
+                "Apportation":
+                    "(4 Intellect points). You call a physical object to you. You can choose any piece of normal "
+                    "equipment on the standard equipment list, or (no more than once per day) you can allow the GM to "
+                    "determine the object randomly. If you call a random object, it has a 10 percent chance of being "
+                    "a cypher or artifact, a 10 percent chance of being an oddity, a 40 percent chance of being a "
+                    "piece of standard equipment, and a 40 percent chance of being a bit of worthless junk. You can’t "
+                    "use this ability to take an item held by another creature. Action."
+            },
+            '5': {
+                "Psychokinetic Attack":
+                    "(5 Intellect points). You can use this attack in one of two ways. The first is to pick up a "
+                    "heavy object and hurl it at someone within short range. This attack is an Intellect action, and "
+                    "if successful, it deals 6 points of damage to the target and to the hurled object (which could "
+                    "be another foe, although that would require two rolls—one roll to grab the first foe and another "
+                    "roll to hit the second foe with the first). The second way is to unleash a shattering burst of "
+                    "power that works only against an inanimate object no larger than half your size. Make an "
+                    "Intellect roll to instantly destroy the object; the task is eased by three steps compared to "
+                    "breaking it with brute strength. Action."
+            },
+            '6': {"CHOICE": {
+                "Improved Apportation":
+                    "(6 Intellect points). You call a creature of up to level 3, which appears next to you. You can "
+                    "choose a creature that you’ve previously encountered, or (no more than once per day) you can "
+                    "allow the GM to determine the creature randomly. If you call a random creature, it has a 10 "
+                    "percent chance of being a creature of up to level 5. The creature has no memory of anything "
+                    "before being called by you, though it can speak and has the general knowledge a creature of its "
+                    "type should possess. The creature is receptive to communication and helping you (unless shown "
+                    "that it should do otherwise). Action.",
+                "Reshape Matter":
+                    "(6 Intellect points). Your mastery of telekinesis is so great that you can reshape objects on "
+                    "a molecular level. You can affect a single object no larger than you, and the object must be "
+                    "visible and close enough for you to touch. You can use this ability to damage the object (as if "
+                    "using Psychokinetic Attack, except the task is eased by four steps instead of three), or you can "
+                    "attempt a crafting task to reshape the object into another form. Reshaping an object usually has "
+                    "a difficulty equal to 1 plus the level of the finished object."
+            }}
+        }
+    },
+    "Fuses Flesh and Steel": {
+        "Description": "At some point in your past, some of your organic parts were replaced with artificial "
+                       "components. (Alternatively, you belong to a secret species of biomechanical hybrids.) These "
+                       "artificial components might be subdermal, or they might resemble more overt metal or synth "
+                       "plating on your skin. They can also take the form of threadlike tendrils of circuitry winding "
+                       "across your flesh. Whatever their appearance, these components give you special abilities. "
+                       "As you advance, you can add to, modify, or discover new functions for them. Unfortunately, "
+                       "your artificial body also has special requirements when it takes damage.",
+        "Connection": [
+            "Pick one other PC. This character knows your true nature, even if no one else does. If your components "
+            "are not particularly hidden, they know a different secret of yours, such as a preprogrammed word that "
+            "will shut you down for ten minutes.",
+            "Pick one other PC. Being close to this person sometimes makes your mechanical parts vibrate slightly. "
+            "You can decide whether this sensation is unnerving or pleasant.",
+            "Pick one other PC. You’re pretty sure that this character is just here to mine you for parts. They "
+            "choose whether or not this is true.",
+            "Pick one other PC who also has mechanical parts. The two of you have bonded over conversations about "
+            "this element you share, and you feel a special connection."
+        ],
+        "Additional Equipment": ["A bag of light tools", "A variety of parts to repair yourself"],
+        "Core Features": {},
+        "Major Effect Suggestions": "You discharge a small pulse of power into your foe. Make an immediate attack "
+                                    "against that foe (using the same stat as the action that caused the major "
+                                    "effect). If the attack succeeds, it deals 4 points of electrical damage.",
+        "Minor Effect Suggestions": "Your servos learn from your successful actions. You gain an asset to similar "
+                                    "actions involving the same task (such as making attacks against the same foe or "
+                                    "operating the same device).",
+        "Tiers": {
+            '1': {
+                "Enhanced Body": "You gain +1 to Armor, +3 to your Might Pool, and +3 to your Speed Pool. Enabler.",
+                "Special Healing":
+                    "Traditional healing skills, medicines, and techniques work only half as well for you. Each time "
+                    "you start at full health, the first 5 points of damage you take can never be healed in these "
+                    "ways or recovered normally. Instead, you must use repairing skills and abilities to restore "
+                    "those points. For example, if you start with a full Might Pool of 10 and take 8 points of "
+                    "damage, you can use recovery rolls to restore 3 points, but the remaining 5 points must be "
+                    "restored with repair tasks."
+            },
+            '2': {
+                "Interface": "By directly plugging into a device, you can identify and learn to operate it as though "
+                             "the task were 1 level lower. Enabler."
+            },
+            '3': {"CHOICE":{
+                "Sensing Package":
+                    "You can see in dim light and darkness as if it were bright light, and you can see up to a short "
+                    "distance through fog, smoke, and other obscuring phenomena. In addition, if you apply a level "
+                    "of Effort to perception or searching tasks, you get a free level of Effort on that task. Enabler.",
+                "Weaponization":
+                    "One light or medium melee weapon of your choice is built into your body, and you are trained in "
+                    "using it. The weapon is concealed until you wish to use it. Enabler."
+            }},
+            '4': {
+                "Fusion":
+                    "You can fuse your cyphers and artifacts with your body. These fused devices function as if they "
+                    "were 1 level higher. Enabler."
+            },
+            '5': {
+                "Deep Reserves":
+                    "Once each day, you can transfer up to 5 points between your Pools in any combination, at a rate "
+                    "of 1 point per round. For example, you could transfer 3 points of Might to Speed and 2 points "
+                    "of Intellect to Speed, which would take a total of five rounds. Action."
+            },
+            '6': {"CHOICE":{
+                "Power Surge": "In addition to your normal recovery rolls each day, you can—at any time between "
+                               "ten-hour rests—recover 1d6 + 6 points to your Intellect Pool. Action.",
+                "Ultra Enhancement": "You gain +1 to Armor and +5 to each of your three stat Pools. Enabler."
+            }}
+        }
+    },
+    "Howls at the Moon": {
+        "Description": "Sometimes the numenera is a double-edged sword. You are cursed and blessed to be able to "
+                       "transform into a powerful creature, drawing additional mass from a transdimensional source. "
+                       "You and the GM should work out the exact nature of the creature, including its appearance, "
+                       "but it’s a wild beast of rage and blood—at least until you learn to control it. Creatures like "
+                       "you are often called “lycanthropes.”",
+        "Connection": [
+            "Pick one other PC. That character is able to soothe you when you’re in beast form. You’ll never attack "
+            "them while transformed, and if they spend three consecutive turns using their action to calm you down, "
+            "you can revert to your normal form without having to make a roll.",
+            "Pick one other PC. You believe that this character intends to convince you to join an entertainment "
+            "venue (or capture you for the same). They choose whether or not this is true.",
+            "Pick two other PCs. They know that it’s beneficial for you to kill and eat a creature while you’re in "
+            "beast form, and they often work together to make sure that happens.",
+            "Pick one other PC. Since this character saw you in beast form, they have been terrified of you. You are "
+            "determined to show them that you’re not as dangerous as they believe.",
+        ],
+        "Additional Equipment": ["an accurate chronometer artifact that always lets you know when the next "
+                                 "transformation is coming."],
+        "Core Features": {},
+        "Major Effect Suggestions": "Your attack conveys a small bit of your lycanthropy. If your foe survives, one "
+                                    "month later, the target transforms into an uncontrolled beast. The GM decides "
+                                    "what happens from there.",
+        "Minor Effect Suggestions": "The target is so intimidated by your bestial attack that it is dazed for one "
+                                    "round, hindering its tasks.",
+        "Tiers": {
+            '1': {
+                "Beast Form":
+                    "On five consecutive nights each month, you change into a monstrous beast for up to one hour "
+                    "each night. In this new form, you gain +8 to your Might Pool, +1 to your Might Edge, +2 to "
+                    "your Speed Pool, and +1 to your Speed Edge. While in beast form, you can’t spend Intellect "
+                    "points for any reason other than to try to change to your normal form before the one-hour "
+                    "duration is over (a difficulty 2 task). In addition, you attack any and every living creature "
+                    "within short range. After you revert to your normal form, you take a –1 penalty to all rolls for "
+                    "one hour. If you did not kill and eat at least one substantial creature while in beast form, the "
+                    "penalty increases to –2 and affects all your rolls for the next 28 hours. Action to change back."
+            },
+            '2': {
+                "Controlled Change":
+                    "You can try to change into your beast form on any night you wish (a difficulty 3 Intellect task). "
+                    "Any transformations you make using this power are in addition to the five nights per month that "
+                    "you change involuntarily. Action to change.",
+            },
+            '3': {"CHOICE": {
+                "Bigger":
+                    "Your beast form grows bigger than before, during which time you achieve a height of 12 feet "
+                    "(4 m). Being so large, your beast form gains the following additional bonuses: +1 to Armor, "
+                    "+5 to your Might Pool, and you are trained in using your fists as heavy weapons (if you weren’t "
+                    "already). However, your Speed defense tasks are hindered. While bigger, you also gain an asset "
+                    "to tasks that are easier for a larger creature to perform, like climbing, intimidating, wading "
+                    "rivers, and so on. Enabler.",
+                "Greater Beast Form":
+                    "Your beast form gains the following additional bonuses: +1 to your Might Edge, +2 to your "
+                    "Speed Pool, and +1 to your Speed Edge. Enabler.",
+            }},
+            '4': {
+                "Greater Controlled Change":
+                    "It’s easier to change into and out of your beast form. Transforming either way is now a "
+                    "difficulty 2 Intellect task. Enabler."
+            },
+            '5': {
+                "Enhanced Beast Form":
+                    "Your beast form gains the following additional bonuses: +3 to your Might Pool, +2 to your Speed "
+                    "Pool, and +2 to Armor. Enabler."
+            },
+            '6': {"CHOICE":{
+                "Lethal": "When you attack in your beast form, you inflict +5 points of damage. Enabler.",
+                "Perfect Control":
+                    "You no longer need to make a roll to change into your beast form or your normal form. You can "
+                    "change back and forth as your action. When you return to your normal form, you no longer take a "
+                    "penalty to your rolls. Enabler."
+            }}
+        }},
+    "Hunts": {
+        "Description": "You are a tracker. Perhaps you hunt animals or more deadly creatures. Perhaps you go after "
+                       "people as a bounty hunter, law enforcer, or killer for hire. Whatever form your hunting takes, "
+                       "you are trained in stalking your quarry and bringing it down. You are a dangerous individual.",
+        "Connection": [
+            "Pick one other PC. That person once saw you show surprising mercy toward your prey, and now you hope "
+            "they keep it quiet—it might harm your reputation.",
+            "Pick one other PC. You accidentally caught them in one of your traps, and they had to get free.",
+            "Pick one other PC. Back in your bounty hunter days (which may or may not be over), you were hired to "
+            "track down someone who was close to this character.",
+            "Pick one other PC. You’ve noticed that it’s almost impossible to track this character, but you’re "
+            "determined to figure out a way."
+        ],
+        "Additional Equipment": [
+            "Boots that muffle your footsteps, giving you an asset on any roll made involving sneaky movement."
+        ],
+        "Core Features": {},
+        "Major Effect Suggestions": "Your foe pauses, terrified by your prowess, and takes no action on their turn.",
+        "Minor Effect Suggestions": "You can attempt an intimidating task to cause your foe to immediately surrender.",
+        "Tiers": {
+            '1': {
+                "Tracker": "You are trained in following and identifying tracks. Enabler.",
+                "Stalker": "You gain an asset to all types of movement tasks (including climbing, swimming, jumping, "
+                           "and balancing). Enabler."
+            },
+            '2': {
+                "Sneak": "You ease stealth and initiative tasks. Enabler.",
+                "Quarry": "(2 Intellect points). Choose a quarry (a single individual creature that you can see). You "
+                          "are trained in all tasks involving following, understanding, interacting with, or fighting "
+                          "that creature. You can have only one quarry at a time. Action to initiate."
+            },
+            '3': {"CHOICE":{
+                "Horde Fighting":
+                    "When two or more foes attack you at once in melee, you can use them against each other. You "
+                    "are trained in either Speed defense rolls or attack rolls (your choice) against them. Enabler.",
+                "Sprint and Grab":
+                    "(2 Speed points). You can run a short distance and make a melee attack to grab a foe of your size "
+                    "or smaller. A successful attack means you grab the foe and bring it to a halt if it was moving "
+                    "(this can be treated as a tackle, if appropriate). Action."
+            }},
+            '4': {
+                "Surprise Attack":
+                    "If attacking from a hidden vantage, with surprise, or before your opponent has acted, you get a "
+                    "free level of Effort on the attack. On a successful hit, you inflict 2 additional points of "
+                    "damage. Enabler."
+            },
+            '5': {
+                "Hunter’s Drive":
+                    "(5 Intellect points) Through force of will, when you wish it, you grant yourself greater "
+                    "prowess in the hunt for ten minutes. During this time, you gain an asset to all tasks involving "
+                    "your quarry, including attacks. Your quarry is the creature you selected with your second-tier "
+                    "ability. Enabler."
+            },
+            '6': {"CHOICE":{
+                "Master Combatant":
+                    "Choose one type of attack in which you are already trained: light bashing, light bladed, light "
+                    "ranged, medium bashing, medium bladed, medium ranged, heavy bashing, heavy bladed, or heavy "
+                    "ranged. You are specialized in attacks using that type of weapon. Enabler.",
+                "Multiple Quarry":
+                    "(6 Intellect points). This ability functions like the second-tier Quarry ability except that you "
+                    "can select up to three creatures as quarry. You must be able to see all three creatures when "
+                    "you initiate this ability. Your Hunter’s Drive ability applies to all three creatures. Action "
+                    "to initiate."
+            }}
+        }},
+    "Lives in the Wilderness": {
+        "Description": "",
+        "Connection": [],
+        "Additional Equipment": [],
+        "Core Features": {},
+        "Major Effect Suggestions": "",
+        "Minor Effect Suggestions": "",
+        "Tiers": {
+            '1': {},
+            '2': {},
+            '3': {},
+            '4': {},
+            '5': {},
+            '6': {}
+        }
+    },
+    "Masters Defense": {
+        "Description": "",
+        "Connection": [],
+        "Additional Equipment": [],
+        "Core Features": {},
+        "Major Effect Suggestions": "",
+        "Minor Effect Suggestions": "",
+        "Tiers": {
+            '1': {},
+            '2': {},
+            '3': {},
+            '4': {},
+            '5': {},
+            '6': {}
+        }
+    },
+    "Masters Weaponry": {
+        "Description": "",
+        "Connection": [],
+        "Additional Equipment": [],
+        "Core Features": {},
+        "Major Effect Suggestions": "",
+        "Minor Effect Suggestions": "",
+        "Tiers": {
+            '1': {},
+            '2': {},
+            '3': {},
+            '4': {},
+            '5': {},
+            '6': {}
+        }
+    },
+    "Murders": {
+        "Description": "",
+        "Connection": [],
+        "Additional Equipment": [],
+        "Core Features": {},
+        "Major Effect Suggestions": "",
+        "Minor Effect Suggestions": "",
+        "Tiers": {
+            '1': {},
+            '2': {},
+            '3': {},
+            '4': {},
+            '5': {},
+            '6': {}
+        }
+    },
+    "Rages": {
+        "Description": "",
+        "Connection": [],
+        "Additional Equipment": [],
+        "Core Features": {},
+        "Major Effect Suggestions": "",
+        "Minor Effect Suggestions": "",
+        "Tiers": {
+            '1': {},
+            '2': {},
+            '3': {},
+            '4': {},
+            '5': {},
+            '6': {}
+        }
+    },
+    "Rides the Lightning": {
+        "Description": "",
+        "Connection": [],
+        "Additional Equipment": [],
+        "Core Features": {},
+        "Major Effect Suggestions": "",
+        "Minor Effect Suggestions": "",
+        "Tiers": {
+            '1': {},
+            '2': {},
+            '3': {},
+            '4': {},
+            '5': {},
+            '6': {}
+        }
+    },
+    "Speaks With a Silver Tongue": {
+        "Description": "",
+        "Connection": [],
+        "Additional Equipment": [],
+        "Core Features": {},
+        "Major Effect Suggestions": "",
+        "Minor Effect Suggestions": "",
+        "Tiers": {
+            '1': {},
+            '2': {},
+            '3': {},
+            '4': {},
+            '5': {},
+            '6': {}
+        }
+    },
+    "Talks to Machines": {
+        "Description": "",
+        "Connection": [],
+        "Additional Equipment": [],
+        "Core Features": {},
+        "Major Effect Suggestions": "",
+        "Minor Effect Suggestions": "",
+        "Tiers": {
+            '1': {},
+            '2': {},
+            '3': {},
+            '4': {},
+            '5': {},
+            '6': {}
+        }
+    },
+    "Wears a Sheen of Ice": {
+        "Description": "",
+        "Connection": [],
+        "Additional Equipment": [],
+        "Core Features": {},
+        "Major Effect Suggestions": "",
+        "Minor Effect Suggestions": "",
+        "Tiers": {
+            '1': {},
+            '2': {},
+            '3': {},
+            '4': {},
+            '5': {},
+            '6': {}
+        }
+    },
+    "Wields Power with Precision": {
+        "Description": "",
+        "Connection": [],
+        "Additional Equipment": [],
+        "Core Features": {},
+        "Major Effect Suggestions": "",
+        "Minor Effect Suggestions": "",
+        "Tiers": {
+            '1': {},
+            '2': {},
+            '3': {},
+            '4': {},
+            '5': {},
+            '6': {}
+        }
+    },
+    "Wields Two Weapons at Once": {
+        "Description": "",
+        "Connection": [],
+        "Additional Equipment": [],
+        "Core Features": {},
+        "Major Effect Suggestions": "",
+        "Minor Effect Suggestions": "",
+        "Tiers": {
+            '1': {},
+            '2': {},
+            '3': {},
+            '4': {},
+            '5': {},
+            '6': {}
+        }
+    },
+    "Works the Back Alleys": {
+        "Description": "",
+        "Connection": [],
+        "Additional Equipment": [],
+        "Core Features": {},
+        "Major Effect Suggestions": "",
+        "Minor Effect Suggestions": "",
+        "Tiers": {
+            '1': {},
+            '2': {},
+            '3': {},
+            '4': {},
+            '5': {},
+            '6': {}
+        }
+    },
+    "Works Miracles": {
+        "Description": "",
+        "Connection": [],
+        "Additional Equipment": [],
+        "Core Features": {},
+        "Major Effect Suggestions": "",
+        "Minor Effect Suggestions": "",
+        "Tiers": {
+            '1': {},
+            '2': {},
+            '3': {},
+            '4': {},
+            '5': {},
+            '6': {}
+        }
+    },
     "Absorbs Energy": {},
     "Acts Without Consequence": {},
     "Adjures the Leviathan": {},

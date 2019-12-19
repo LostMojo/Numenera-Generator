@@ -24,6 +24,7 @@ def focus_list(): return list(data.foci.keys())
 class NumeneraPC(CypherPC):
     _type_stat_base = data.type_template["Base Stats"]
     _assignable_points = data.assignable_stat_points
+    _assignable_edge_points = 0
 
     _weapons = []
     _community_bonus = ""
@@ -48,7 +49,11 @@ class NumeneraPC(CypherPC):
             self._type_stat_base = d["Base Stats"]
             self._max_pools = [self._type_stat_base[p]+self._other_pool_bonuses[p]+self._assigned_points[p] for p in
                                range(0, len(self._max_pools))]
-            self._edge_list = d["Starting Edge"]
+            if d["Starting Edge"] == "CHOICE":
+                self._edge_list = [0, 0, 0]
+                self._assignable_edge_points = 1
+            else:
+                self._edge_list = d["Starting Edge"]
             self._weapons = d["Weapon Proficiencies"]
             for skill in d["Class Skills"]:
                 self.overwrite_skill(skill)
@@ -102,6 +107,11 @@ class NumeneraPC(CypherPC):
                     self._abilities[str(t)] = tier_dictionary[str(t)]
             # no support for over-levelling
 
+    def randomize_character(self):
+        self._descriptor = random.choice(descriptor_list())
+        self._type = random.choice(type_list())
+        self._focus = random.choice(focus_list())
+
     def _reset_character(self):
         pass
 
@@ -109,7 +119,11 @@ class NumeneraPC(CypherPC):
 if __name__ == "__main__":
     teddy = NumeneraPC("Theodore", tier=6, char_type="Jack", descriptor="Swift", focus="Controls Beasts")
     print(teddy.describe())
-    for tier in teddy.abilities():
+    print(teddy.max_pools())
+    teddy.randomize_character()
+    print(teddy.describe())
+"""    for tier in teddy.abilities():
         print(str(tier))
         for key in teddy.abilities()[tier]:
             print(key)
+"""
