@@ -928,7 +928,7 @@ types = {
                          "end of your next turn all of your tasks are hindered. Enabler.",
                  }}
         }
-    },
+    },  # End Discovery Types, Begin Destiny Types
     "Arkus": {
         "Base Stats": [8, 9, 11],
         "Starting Edge": [0, 0, 1],
@@ -1171,7 +1171,7 @@ descriptors = {
     },
     "Tough": {
         "Stat Bonuses": [0, 0, 0],
-        "Skills":["Might Defense"],
+        "Skills": ["Might Defense"],
         "Inabilities":[],
         "Features": {"Resilient": "Armor + 1", "Healthy": "Add 1 to your recovery rolls"},
         "Additional Equipment": ["Extra Light Weapon"],
@@ -1180,7 +1180,7 @@ descriptors = {
                                        "You need money because your family is in debt.",
                                        "You stepped in to defend one of the PCs when they were threatened. While "
                                        "talking to them afterward, you heard about the group’s task."]
-    },
+    },  # End Discovery Descriptors, Begin Destiny Descriptors
     "Adaptable": {
 
     },
@@ -2339,213 +2339,931 @@ foci = {
             }}
         }},
     "Lives in the Wilderness": {
-        "Description": "",
-        "Connection": [],
-        "Additional Equipment": [],
+        "Description": "You dwell in the wilds. You probably have done so most, if not all, of your life, coming to "
+                       "understand the mysteries of nature, weather, and survival. The ways of flora and fauna are "
+                       "your ways.",
+        "Connection": [
+            "Pick one other PC who isn’t from the wilderness. You can’t help but feel a little contempt for that "
+            "character and their “civilized” ways, which show disdain for all things natural and (to your mind) true.",
+            "Pick one other PC. This character is one of the few people that you are completely comfortable around, "
+            "and you are often surprised at how easily you let down your guard near them.",
+            "Pick one other PC. This character once saved you from an uncomfortable social situation, and you still "
+            "feel grateful.",
+            "Pick one other PC. This person seems to understand civilization in the same way that you understand the "
+            "wilderness. You could choose to help each other or despise each other for this different way of seeing "
+            "the world."
+        ],
+        "Additional Equipment": ["a directional compass."],
         "Core Features": {},
-        "Major Effect Suggestions": "",
-        "Minor Effect Suggestions": "",
+        "Major Effect Suggestions": "A foe that is a natural creature becomes warily passive.",
+        "Minor Effect Suggestions": "A foe that is a natural creature flees rather than continue to fight you.",
         "Tiers": {
-            '1': {},
-            '2': {},
-            '3': {},
-            '4': {},
-            '5': {},
-            '6': {}
+            '1': {
+                "Wilderness Life":
+                    "You are trained in two of the following: climbing, swimming, navigation, or identifying plants "
+                    "and creatures. Enabler.",
+                "Wild Hardiness":
+                    "You gain 3 points to your Might Pool. Enabler.",
+            },
+            '2': {
+                "Living off the Land":
+                    "Given an hour or so, you can always find edible food and potable water in the wilderness. You "
+                    "can even find enough for a small group of people, if need be. Further, since you’re so hardy and "
+                    "have gained resistance over time, you are trained in resisting the effects of natural poisons "
+                    "(such as those from plants or living creatures). You’re also immune to natural diseases. Enabler.",
+                "Wilderness Explorer":
+                    "While taking any action (including fighting) in the wild, you ignore any penalties due to natural "
+                    "causes such as tall grass, thick brush, rugged terrain, weather, and so on. Enabler."
+            },
+            '3': {"CHOICE": {
+                "Animal Senses and Sensibilities":
+                    "You are trained in listening and spotting things. In addition, most of the time, the GM should "
+                    "alert you if you’re about to walk into an ambush or a trap that is lower than level 5. Enabler.",
+                "Wilderness Encouragement":
+                    "(3 Intellect points). While in the wilderness, or when talking about your time in the wilderness, "
+                    "your stirring words of encouragement grant a target within short range that can understand you "
+                    "1d6 points to one Pool. You can’t use this ability on the same creature again until they’ve made "
+                    "a recovery roll. Action."
+            }},
+            '4': {
+                "Wilderness Awareness":
+                    "(4 Intellect points). Your connection to the natural world extends to a degree that some would "
+                    "call supernatural. While in the wilderness, you can extend your senses up to a mile in any "
+                    "direction and ask the GM a very simple, general question about that area, such as “Where is the "
+                    "margr camp?” or “Is my friend Deithan still alive?” If the answer you seek is not in the area, "
+                    "you receive no information. Action."
+            },
+            '5': {
+                "The Wild Is on Your Side":
+                    "(5 Intellect points). While you’re in the wilderness, foes within short range are tripped by "
+                    "rocks, tangled in vines, bitten by insects, and distracted or confused by small animals, which "
+                    "hinders all their tasks for ten minutes. Action to initiate."
+            },
+            '6': {"CHOICE": {
+                "One With the Wild":
+                    "(6 Intellect points). For the next hour, natural animals and plants within long range will not "
+                    "knowingly harm you or those you designate. In addition, your Might Edge, Speed Edge, and "
+                    "Intellect Edge increase by 1, and if you make any recovery rolls during this period, you "
+                    "recover twice as many points. Action to initiate.",
+                "Wild Camouflage":
+                    "(4 Intellect points). By drawing your clothing about you just so and using various tricks and "
+                    "your deep knowledge of your surroundings, you become invisible in the wilderness for ten "
+                    "minutes. While you are invisible, this asset eases your stealth and Speed defense tasks by two "
+                    "steps. This effect ends if you do something to reveal your presence or position—attacking, using "
+                    "an ability, moving a large object, and so on. If this occurs, you can regain the remaining "
+                    "invisibility effect by taking an action to focus on hiding your position. Action to initiate or "
+                    "reinitiate."
+            }}
         }
     },
     "Masters Defense": {
-        "Description": "",
-        "Connection": [],
-        "Additional Equipment": [],
+        "Description": "Protecting yourself is obviously important in dangerous situations, and you are particularly "
+                       "good at it. Cautious and prudent, you learn techniques to defend against all kinds of "
+                       "attacks, both physical and mental. The winner is often the last person standing, and you’ve "
+                       "done all you can to ensure that person will be you.",
+        "Connection": [
+            "Pick one other PC. This character protected you from harm recently, and you feel indebted to them for "
+            "saving your life.",
+            "Pick one other PC. This person thinks you are an incredibly selfish person, perhaps based on their belief "
+            "that you always save yourself first.",
+            "Pick one other PC. You once fought on opposite sides of a combat.",
+            "Pick one other PC. This character seems to be a jinx for you. Whenever they are next to you, your Speed "
+            "defense tasks are hindered."
+        ],
+        "Additional Equipment": ["A Shield"],
         "Core Features": {},
-        "Major Effect Suggestions": "",
-        "Minor Effect Suggestions": "",
+        "Major Effect Suggestions": "If an attack would hit you next round, it harmlessly strikes your shield instead "
+                                    "if you choose.",
+        "Minor Effect Suggestions": "You gain an asset to Speed defense rolls for one round.",
         "Tiers": {
-            '1': {},
-            '2': {},
-            '3': {},
-            '4': {},
-            '5': {},
-            '6': {}
+            '1': {
+                "Shield Master":
+                    "When you use a shield, in addition to the asset it gives you (easing Speed defense tasks), you "
+                    "can act as if you are trained in Speed defense tasks. However, in any round in which you use this "
+                    "benefit, your attacks are hindered. Enabler."
+            },
+            '2': {
+                "Sturdy": "You are trained in Might defense tasks. Enabler.",
+                "Armor Expert": "When you wear any armor, the Speed cost for wearing it is reduced by 1. Enabler."
+            },
+            '3': {"CHOICE": {
+                "Dodge and Resist":
+                    "(3 Speed points). You can reroll any of your Might, Speed, or Intellect defense rolls and take "
+                    "the better of the two results. Enabler.",
+                "Dodge and Respond":
+                    "(3 Might points). If a melee attack misses you, you can immediately make a melee attack in "
+                    "return, but no more than once per turn. Enabler."
+            }},
+            '4': {
+                "Tower of Will":
+                    "You are trained in Intellect defense tasks and gain +3 points to your Intellect Pool. Enabler.",
+                "Armor Master":
+                    "You reduce the Speed cost of any armor you wear to 0 (if it isn’t already 0). Enabler."
+            },
+            '5': {
+                "Nothing but Defend":
+                    "If you do nothing on your turn but defend, you are specialized in all defense tasks for one "
+                    "round. Action."
+            },
+            '6': {"CHOICE": {
+                "Defense Master":
+                    "Every time you succeed at a Speed defense task, you can make an immediate attack against your "
+                    "foe. (This ability replaces Dodge and Respond, if you took that; you can exchange that ability "
+                    "for Dodge and Resist.) Your attack must be the same type (melee weapon, ranged weapon, or "
+                    "unarmed) as the attack you defend against. If you don’t have an appropriate type of weapon "
+                    "ready, you can’t use this ability. Enabler.",
+                "Wear It Well": "When you wear armor of any kind, you gain an additional +1 to Armor. Enabler."
+            }}
         }
     },
     "Masters Weaponry": {
-        "Description": "",
-        "Connection": [],
-        "Additional Equipment": [],
-        "Core Features": {},
-        "Major Effect Suggestions": "",
-        "Minor Effect Suggestions": "",
+        "Description": "You have worked long and hard with one particular type of weapon: bows, swords, axes, "
+                       "daggers, whips, or whatever you choose. Thus, you are an archer, a swordsman, an axe master, "
+                       "a mistress of knives, or whatever is appropriate to your chosen weapon. A master of the rapier "
+                       "is different than a master of the warhammer, and an archer is different than a whip wielder.",
+        "Connection": [
+            "Pick one other PC. That character shows potential in the use of your weapon. You would like to train "
+            "them, but you’re not necessarily qualified to teach (that’s up to you), and they might not be interested "
+            "(that’s up to them).",
+            "Pick one other PC. If that person is within immediate range when you’re in a fight, sometimes they grant "
+            "you an asset, and sometimes they hinder you (50% chance either way, determined per fight).",
+            "Pick one other PC. You once saved this person’s life, and they feel indebted to you. You wish they "
+            "didn’t; it’s all just part of the job.",
+            "Pick one other PC. This person recently mocked your combat stance. How you deal with this (if at all) "
+            "is up to you."
+        ],
+        "Additional Equipment": ["a high-quality weapon of your choosing."],
+        "Core Features": {
+            "Weaponry Powers":
+                "If you have “supernatural” special abilities (such as some esoteries), these look like your chosen "
+                "weapon. So the force blast of the Onslaught esotery appears to be a large weapon made of force, and "
+                "the Flash esotery produces a flurry of weaponry. These alterations change nothing other than the "
+                "appearance of the effects. As another example, Barrier becomes a wall of swirling blades of energy. "
+                "This alteration changes the esotery such that it is not a solid barrier but rather inflicts 1 point "
+                "of damage to anyone who touches it and 4 points of damage to anyone who passes through it."
+        },
+        "Major Effect Suggestions": "Make an immediate additional attack with the weapon as part of your turn.",
+        "Minor Effect Suggestions": "The target is so dazzled by your expertise that it is dazed for one round, "
+                                    "hindering all of its tasks.",
         "Tiers": {
-            '1': {},
-            '2': {},
-            '3': {},
-            '4': {},
-            '5': {},
-            '6': {}
+            '1': {
+                "Weapon Master": "You gain a +1 bonus to damage with your chosen weapon. Enabler.",
+                "Weapon Crafter": "You are trained in crafting tasks associated with your chosen weapon. For "
+                                  "instance, if your weapon is a bow, you are trained in tasks related to crafting "
+                                  "bows and fletching arrows; if your weapon is a sword, you are trained in tasks for "
+                                  "forging swords and sharpening blades; and so on. Enabler."
+            },
+            '2': {
+                "Weapon Defense":
+                    "While your chosen weapon is in your hand(s), you are trained in Speed defense rolls. Enabler."
+            },
+            '3': {"CHOICE": {
+                "Disarming Strike":
+                    "(3 Speed points) Your attack inflicts 1 point less damage and disarms your foe so that their "
+                    "weapon is now 10 feet (3 m) away on the ground. (If your chosen weapon is a whip, you can "
+                    "instead deposit the disarmed weapon into your hands; if your chosen weapon is a bow or other "
+                    "ranged weapon that fires physical rounds, you can instead “nail” the disarmed weapon to a "
+                    "nearby object or structure. Choosing to do either of these hinders your attack.) Action.",
+                "Rapid Attack":
+                    "(3 Speed points) Once per round, you can make an additional attack with your chosen weapon. "
+                    "Enabler."
+            }},
+            '4': {
+                "Never Fumble":
+                    "If you roll a natural 1 when attacking with your chosen weapon, you can ignore or countermand the "
+                    "GM intrusion for that roll. You can never be disarmed of your chosen weapon, nor will you ever "
+                    "drop it accidentally. Enabler."
+            },
+            '5': {
+                "Extreme Mastery":
+                    "(6 Might or 6 Speed points). When using your chosen weapon, you can reroll any attack roll you "
+                    "wish and take the better of the two results. Enabler."
+            },
+            '6': {"CHOICE": {
+                "Damage Dealer":
+                    "You gain a +3 bonus to damage with your chosen weapon. This bonus adds to the one from the "
+                    "Weapon Master ability, giving you a total bonus of +4. Enabler.",
+                "Death Dealer (5 Might points)":
+                    "If you strike a foe of level 3 or less with your chosen weapon, you kill the target instantly. "
+                    "Action.",
+                "Master Combatant":
+                    "Choose one type of attack in which you are already trained: light bashing, light bladed, light "
+                    "ranged, medium bashing, medium bladed, medium ranged, heavy bashing, heavy bladed, or heavy "
+                    "ranged. You are specialized in attacks using that type of weapon. Enabler.",
+            }}
         }
     },
     "Murders": {
-        "Description": "",
-        "Connection": [],
-        "Additional Equipment": [],
+        "Description": "The murderous assassin is a master of dealing death. No one is better at sneaking into a "
+                       "location, eliminating a target, and slipping out again. Obviously, a professional killer is "
+                       "not likely to have a lot of friends.",
+        "Connection": [
+            "Pick one other PC. That character knows your real identity, profession, and background. To all others, "
+            "the truth about you is a closely guarded secret.",
+            "Pick one other PC. You were recently approached by someone who wanted to hire you to take that character "
+            "out. You haven’t yet decided whether to take the job or warn them that their life is in danger.",
+            "Pick two other PCs. One night after perhaps too much celebrating, you loudly claimed responsibility for "
+            "a murder you didn’t commit. These two characters were the only ones who heard. Whether they believe you "
+            "or not is up to them.",
+            "Pick one other PC. That character is the one who got you started down the path of taking lives, whether "
+            "they know it or not."
+        ],
+        "Additional Equipment": ["a disguise kit", "three doses of a level 2 blade poison that inflicts 5 points of "
+                                                   "damage."],
         "Core Features": {},
-        "Major Effect Suggestions": "",
-        "Minor Effect Suggestions": "",
+        "Major Effect Suggestions": "If you have poison amid your belongings, you were able to apply it just before "
+                                    "the strike, adding the poison’s effects to the normal attack damage.",
+        "Minor Effect Suggestions": "No one but the foe notices that you make the attack.",
         "Tiers": {
-            '1': {},
-            '2': {},
-            '3': {},
-            '4': {},
-            '5': {},
-            '6': {}
+            '1': {
+                "Surprise Attack":
+                    "If attacking from a hidden vantage, with surprise, or before an opponent has acted, you gain an "
+                    "asset to your attack. On a successful hit with this surprise attack, you inflict 2 additional "
+                    "points of damage. Enabler.",
+                "Natural Assassin": "You are trained in stealth and disguise tasks. Enabler."
+            },
+            '2': {
+                "Quick Death":
+                    "(2 Speed points) You know how to kill quickly. When you hit with a melee or ranged attack, you "
+                    "deal 4 additional points of damage. You can’t make this attack in two consecutive rounds. Action.",
+                "Infiltrator": "You are trained in interactions involving lies or trickery. Enabler."
+            },
+            '3': {"CHOICE": {
+                "Awareness":
+                    "(3 Intellect points). You become hyperaware of your surroundings in order to better locate your "
+                    "next victim. For ten minutes, you are aware of all living things within long range (including "
+                    "their general position), and by concentrating (another action), you can attempt to learn the "
+                    "general health and power level of any one of them. Action.",
+                "Poison Crafter":
+                    "You are trained in crafting, sensing, identifying, and resisting poisons. Your poison crafting "
+                    "has given you some immunity to poisons; you have +5 Armor that applies specifically to poison "
+                    "damage. Enabler.",
+            }},
+            '4': {
+                "Better Surprise Attack":
+                    "If attacking from a hidden vantage, with surprise, or before an opponent has acted, your attack "
+                    "is eased by two steps instead of one. On a successful hit with this surprise attack, you inflict "
+                    "2 additional points of damage (for a total of 4 additional points of damage). Enabler."
+            },
+            '5': {
+                "Slayer (5 Speed points)":
+                    "With a swift and sudden attack, you strike a foe in a vital spot. If the target is level 3 or "
+                    "lower, it is killed outright. Action."
+            },
+            '6': {"CHOICE": {
+                "Escape Plan":
+                    "When you kill a foe, you can attempt a sneaking action to immediately hide from anyone around, "
+                    "assuming that a suitable hiding place is nearby. Enabler.",
+                "Murderer":
+                    "(8+ Speed points) With a swift and sudden attack, you strike a foe in a vital spot. If the "
+                    "target is level 4 or lower, it is killed outright. For each additional level of Effort you apply, you can increase the level of the target by 1. Action."
+            }}
         }
     },
     "Rages": {
-        "Description": "",
-        "Connection": [],
+        "Description": "The berserker is a feared fighter who cannot be stopped. You put yourself into a howling "
+                       "battle frenzy that can make you a terror on the battlefield. You might hail from a less "
+                       "civilized society, perhaps even a tribal one.",
+        "Connection": [
+            "Choose one other PC. You feel strangely protective toward that character and don’t want to see them come "
+            "to harm.",
+            "Pick one other PC. That character knows a secret about your past that is tied to your Frenzy ability.",
+            "Pick one other PC. The first time you went into a frenzy was in an attempt to save their loved one from "
+            "an attack. You failed, partly because of your inexperience.",
+            "Choose one other PC. That character is terrified by your rage and sometimes can’t help but flee at "
+            "inopportune times."
+        ],
         "Additional Equipment": [],
         "Core Features": {},
-        "Major Effect Suggestions": "",
-        "Minor Effect Suggestions": "",
+        "Major Effect Suggestions": "Your foe is terrified of your rage and uses its next two actions to flee.",
+        "Minor Effect Suggestions": "When fighting multiple foes, you knock one into another, putting both off "
+                                    "balance and hindering them for one round.",
         "Tiers": {
-            '1': {},
-            '2': {},
-            '3': {},
-            '4': {},
-            '5': {},
-            '6': {}
+            '1': {
+                "Frenzy":
+                    "(1 Intellect point) When you wish, while in combat, you can enter a state of frenzy. While in "
+                    "this state, you can’t use Intellect points, but you gain +1 to your Might Edge and your Speed "
+                    "Edge. This effect lasts as long as you wish, but it ends if no combat is taking place within "
+                    "range of your senses. Enabler."
+            },
+            '2': {
+                "Hardy":
+                    "You gain +5 to your Might Pool. These additional points can be used only to absorb damage. "
+                    "You can’t spend them to apply Effort to rolls. Enabler.",
+                "Mobile Fighter": "You are trained in climbing and jumping tasks. Enabler."
+            },
+            '3': {
+                "Unarmored Fighter": "While unarmored, you are trained in Speed defense tasks. Enabler.",
+                "CHOICE": {
+                    "Ignore the Pain":
+                        "Your rage makes minor wounds seem insignificant. While you are in a state of frenzy, gain +1 "
+                        "to your Armor. Enabler.",
+                    "Power Strike":
+                        "(3+ Might points) If you successfully attack a target, you knock it prone in addition to "
+                        "inflicting damage. The target must be your size or smaller. You can knock down a target larger"
+                        " than you if you apply a level of Effort to do so (rather than to ease the attack). Enabler."
+            }},
+            '4': {
+                "Greater Frenzy":
+                    "(4 Intellect points) When you wish, while in combat, you can enter a state of frenzy. While in "
+                    "this state, you can’t use Intellect points, but you gain +2 to your Might Edge and your Speed "
+                    "Edge. This effect lasts as long as you wish, but it ends if no combat is taking place within "
+                    "range of your senses. You can use this ability or your first-tier Frenzy ability, but you can’t "
+                    "use both at the same time. Enabler."
+            },
+            '5': {
+                "Attack and Attack Again":
+                    "Rather than granting additional damage or a minor or major effect, a natural 17 or higher on "
+                    "your attack roll allows you the option of immediately making another attack. Enabler."
+            },
+            '6': {"CHOICE":{
+                "Not Dead Yet":
+                    "When you would normally die, you instead fall unconscious for one round and then awaken. You "
+                    "immediately gain 1d6 +6 points to restore your stat Pools and are treated as if debilitated "
+                    "(which for you is like being impaired, thanks to your Ignore the Pain ability) until "
+                    "you rest for ten hours. If you die again before you make your ten-hour recovery roll, you are "
+                    "truly dead. Enabler.",
+                "Tough and Fast":
+                    "You gain +6 to your Might Pool and your Speed Pool. Enabler."
+            }}
         }
     },
     "Rides the Lightning": {
-        "Description": "",
-        "Connection": [],
-        "Additional Equipment": [],
-        "Core Features": {},
-        "Major Effect Suggestions": "",
-        "Minor Effect Suggestions": "",
+        "Description": "The ancients harnessed electricity in strange and wonderful ways. Through practice and "
+                       "inherent ability (or the subtle use of hidden or implanted devices), you control the same "
+                       "energy. Not only can you create and discharge electrical power, but you can eventually learn "
+                       "to use it to transport yourself.",
+        "Connection": [
+            "Pick one other PC. This character has been your friend for a long time, and you have learned to bring "
+            "them along when you ride the lightning. If the character is standing right next to you, you can take "
+            "them with you when you use the Bolt Rider or Electrical Flight powers. (Normally, neither ability allows "
+            "you to transport other creatures.)",
+            "Pick two other PCs. You know about an important connection between them that even they don’t know about.",
+            "Pick one other PC. This character has interesting ideas about electricity and how it can be harnessed. "
+            "If you are trained with machines, after you talk to this character for an hour, you gain an asset on any "
+            "task involving identifying, crafting, or repairing a machine that uses electricity.",
+            "Pick one other PC. This person has the worst luck with electrical devices of anyone you’ve ever met. "
+            "You want to help them, but you aren’t sure how or even whether they will be open to your assistance.",
+        ],
+        "Additional Equipment": ["a bag of miscellaneous batteries and power cells. Whenever you find a new device "
+                                 "that operates on batteries or cells (GM’s discretion), there is a 75 percent chance "
+                                 "that the bag contains one that will power the device if it depletes."],
+        "Core Features": {
+            "Electrical Abilities":
+                "If you have abilities that would normally use force or other energy, they instead use "
+                "electricity. For example, a Flash or an Onslaught force blast is a blast of lightning. "
+                "This alteration changes nothing other than the type of damage and the fact that it "
+                "might start fires."
+        },
+        "Major Effect Suggestions": "Devices filled with electrical power explode. You can target and destroy an "
+                                    "artifact that a foe is holding or wearing.",
+        "Minor Effect Suggestions": "The target is dazed by electricity for one round, hindering all of its tasks. "
+                                    "Electricity can also shut down an automaton for one round.",
         "Tiers": {
-            '1': {},
-            '2': {},
-            '3': {},
-            '4': {},
-            '5': {},
-            '6': {}
+            '1': {
+                "Shock":
+                    "(1 Intellect point) Your hands crackle with electricity, and the next time you touch a creature, "
+                    "you inflict 3 points of damage. Alternatively, if you wield a weapon, for ten minutes it crackles "
+                    "with electricity and inflicts 1 additional point of damage per attack. Action for touch; enabler "
+                    "for weapon.",
+                "Charge":
+                    "(1+ Intellect points) You can charge an artifact or other device (except a cypher) so that it "
+                    "can be used once. The cost is 1 Intellect point plus 1 point per level of the device. Action."
+            },
+            '2': {
+                "Bolt Rider":
+                    "(4 Intellect points). You can move a long distance from one location to another almost "
+                    "instantaneously, carried by a bolt of lightning. You must be able to see the new location, and "
+                    "there must be no intervening barriers. Action.",
+            },
+            '3': {
+                "Lightning Swift": "You gain +1 to your Speed Edge. Enabler.",
+                "CHOICE": {
+                    "Drain Charge":
+                        "You can drain the power from an artifact or device, allowing you to regain 1 Intellect "
+                        "point per level drained. You regain points at the rate of 1 point per round and must give "
+                        "your full concentration to the process each round. The GM determines whether the device is "
+                        "fully drained (likely true of most handheld or smaller devices) or retains some power "
+                        "(likely true of large machines). Action to initiate; action each round to drain.",
+                    "Electric Armor":
+                        "(4 Intellect points) When you wish it, electricity crackles across your body for ten minutes, "
+                        "granting you +1 to Armor. While electrified, you have an additional +2 to Armor versus "
+                        "electrical damage specifically, and you inflict 2 points of damage on any creature that "
+                        "touches you or attacks you with a melee weapon that conducts electricity. Enabler."
+                }
+            },
+            '4': {
+                "Bolts of Power":
+                    "(5+ Intellect points) You blast a fan of lightning out to short range in an arc that is "
+                    "approximately 50 feet (15 m) wide at the end. This discharge inflicts 4 points of damage. If "
+                    "you apply Effort to increase the damage rather than to ease the task, you deal 2 additional "
+                    "points of damage per level of Effort (instead of 3 points); however, targets in the area take "
+                    "1 point of damage even if you fail the attack roll. Action.",
+            },
+            '5': {
+                "Electrical Flight":
+                    "(5 Intellect points) You exude an aura of crackling electricity that lets you fly a long "
+                    "distance each round for ten minutes. You can’t carry other creatures with you. Action to activate."
+            },
+            '6': {"CHOICE":{
+                "Flash Across the Miles":
+                    "(6+ Intellect points). You can move to an open location on the earth that you’re familiar with "
+                    "almost instantaneously, transformed into a bolt of lightning. If you apply a level of Effort, "
+                    "you can attempt to penetrate covered locations that you’re aware of as long as a route exists "
+                    "from the open air to the area you want to reach that electricity can easily follow. Action.",
+                "Wall of Lightning":
+                    "(6 Intellect points) You create a barrier of crackling electricity up to 2,500 square feet "
+                    "(230 sq. m) in size, shaped as you wish. The wall is a level 7 barrier. Anyone within immediate "
+                    "distance of the wall automatically takes 10 points of damage. The wall lasts for one hour. "
+                    "Action to create."
+            }}
         }
     },
     "Speaks With a Silver Tongue": {
-        "Description": "",
-        "Connection": [],
-        "Additional Equipment": [],
+        "Description": "You are poetry incarnate. The words flow from your tongue like liquid metal. Your voice is "
+                       "golden and captivating. With enough time and focus, you can convince almost anyone to do "
+                       "almost anything for you, with you, or in spite of you. Words—words are what matter. You "
+                       "believe they have power. There’s a chance you don’t care much about your appearance, as long "
+                       "as you can say what you want to say.",
+        "Connection": [
+            "Pick one other PC. That character seems overly affected by your words. You’ve accidentally made them cry "
+            "or laugh just by talking to them.",
+            "Pick one other PC. That character believes that you speak falsely and is never affected by your words.",
+            "Pick one other PC. You’d like to get to know them better, but don’t want to use your skills to do so.",
+            "Pick one other PC. That character would like to learn your storytelling techniques, and you’re trying to "
+            "decide whether to teach them."
+        ],
+        "Additional Equipment": ["a book in which you keep notes of your favorite words, inspirational stories, and "
+                                 "speech anecdotes."],
         "Core Features": {},
-        "Major Effect Suggestions": "",
-        "Minor Effect Suggestions": "",
+        "Major Effect Suggestions": "You speak with extra conviction, increasing the effect, duration, or range of "
+                                    "your action.",
+        "Minor Effect Suggestions": "The next time you attempt to influence, persuade, or deceive the same foe, the "
+                                    "task is eased.",
         "Tiers": {
-            '1': {},
-            '2': {},
-            '3': {},
-            '4': {},
-            '5': {},
-            '6': {}
+            '1': {
+                "Poetic License":
+                    "You are trained in all social interactions, including persuasion, deception, and intimidation. "
+                    "You also know two languages other than the Truth. Enabler."
+            },
+            '2': {
+                "A Smile and a Word":
+                    "When you use Effort on any action involving interactions—even those having to do with calming "
+                    "animals or communicating with someone or something whose language you do not speak—you gain a "
+                    "free level of Effort on the task. Action."
+            },
+            '3': {"CHOICE": {
+                "Verbal Misdirection":
+                    "(2+ Intellect points) With fast talk and bewildering words, you can confuse and distract anyone "
+                    "that you’re speaking with, giving you an asset on social interactions with that person for ten "
+                    "minutes. For each level of Effort you use with this ability, you can affect an additional "
+                    "creature. Enabler.",
+                "Play to the Crowd":
+                    "(3 Intellect points) You give a speech that is both rousing and terrifying. Those within short "
+                    "range who can hear and understand you have their next action either eased (an asset) or "
+                    "hindered—you choose, and it can be different for each individual.",
+            }},
+            '4': {
+                "Castigate":
+                    "(4 Intellect points) You intimidate any opponent within long range who understands speech "
+                    "(even if it is not your language) so much that they lose their next action and all the rest "
+                    "of their actions are hindered for one minute. Action."
+            },
+            '5': {
+                "Stay the Course":
+                    "(5 Intellect points) When your companions are flagging, you can help inspire them with a "
+                    "well-timed word or two. Any ally (except you) within immediate range can make a recovery roll "
+                    "that is not an action and does not count toward their daily limit. Action."
+            },
+            '6': {"CHOICE":{
+                "Entrancing Speech":
+                    "(6 Intellect points) Everyone within long range who can hear and understand you takes no action "
+                    "for as long as you do not move and use your action to speak soothing and calming words. If an "
+                    "affected creature is attacked during this time, they break out of the trance immediately. "
+                    "Action to initiate.",
+                "Command":
+                    "(7 Intellect points) A target within short range obeys any command you give as long as they can "
+                    "hear and understand you. Further, as long as you continue to do nothing but issue commands "
+                    "(taking no other action), you can give that same target a new command. This effect ends when you "
+                    "stop issuing commands or they are out of short range. Action to initiate.",
+            }}
         }
     },
     "Talks to Machines": {
-        "Description": "",
-        "Connection": [],
-        "Additional Equipment": [],
+        "Description": "Since you were young, you had an affinity for machines. It seemed almost like you were "
+                       "speaking to them.\nYou were. You have the ability to use your organic brain like an "
+                       "intelligent machine, interfacing “wirelessly” with any electronic device. You can control "
+                       "and influence them in ways that others can’t. Intelligent machines are your friends and "
+                       "companions. You have also learned to repair machines of all kinds because the better they "
+                       "work, the better off you are as well.",
+        "Connection": [
+            "Pick one other PC. That character seems to have a terrible relationship with machines—or at least the "
+            "machines that you communicate with. If that person is next to a machine that you interact with in a "
+            "friendly manner, that machine is treated in all ways as being 1 level lower than normal (unless doing so "
+            "benefits you or them, in which case the level does not change).",
+            "Pick one other PC. That person seems especially leery of you, though this could just be your perception.",
+            "Pick one other PC. That character has a small machine among their equipment but won’t tell you any "
+            "details about it or let you see it.",
+            "Pick one other PC. You know that this character knows an incriminating or embarrassing secret about you, "
+            "and you hope that they do not reveal it."
+        ],
+        "Additional Equipment": ["A bag of small tools."],
         "Core Features": {},
-        "Major Effect Suggestions": "",
-        "Minor Effect Suggestions": "",
+        "Major Effect Suggestions": "The duration of influence or control becomes 28 hours.",
+        "Minor Effect Suggestions": "The duration of influence or control is doubled.",
         "Tiers": {
-            '1': {},
-            '2': {},
-            '3': {},
-            '4': {},
-            '5': {},
-            '6': {}
+            '1': {
+                "Machine Affinity": "You are trained in tasks involving electrical machines. Enabler.",
+                "Distant Activation":
+                    "(1 Intellect point) You can activate or deactivate any machine you can see within short range, "
+                    "even if normally you would have to touch or manually operate the device. To use this ability, "
+                    "you must understand the function of the machine, it must be your size or smaller, and it can’t "
+                    "be connected to another intelligence (or be intelligent itself). Action.",
+            },
+            '2': {
+                "Coaxing Power": "(2 Intellect points) You boost the power or function of a machine so that it "
+                                 "operates at 1 level higher than normal for one hour. Action to initiate.",
+                "Charm Machine":
+                    "(2 Intellect points). You convince an unintelligent machine to “like” you. A machine that likes "
+                    "you is 50 percent less likely to function if said function would cause you harm. Thus, if a foe "
+                    "attempts to detonate a bomb near you controlled by a detonator that likes you, there is a 50 "
+                    "percent chance that it won’t explode. Action to initiate.",
+            },
+            '3': {"CHOICE":{
+                "Command Machine":
+                    "(4 Intellect points). If you’ve charmed an unintelligent machine or have spoken telepathically "
+                    "with an intelligent machine, you can attempt to command it to take one action within its "
+                    "capabilities on its next turn. (If you command an intelligent machine with this power, it "
+                    "likely becomes hostile to you afterward.) Action.",
+                "Intelligent Interface":
+                    "(3 Intellect points) You can speak telepathically with any intelligent machine within long "
+                    "range. Further, you are trained in all interactions with intelligent machines. Such machines "
+                    "and automatons that normally would never communicate with a human might talk to you. Enabler."
+            }},
+            '4': {
+                "Machine Companion":
+                    "You create a level 3 animate, intelligent machine that accompanies you and acts as you direct. As "
+                    "a level 3 machine companion, it has a target number of 9 and 9 health, and it inflicts 3 points "
+                    "of damage. If it’s destroyed, it takes you one month to create a new one. Enabler.",
+                "Automaton Fighter":
+                    "When fighting an automaton or intelligent machine, you are trained in attacks and defense. "
+                    "Enabler."
+            },
+            '5': {
+                "Information Gathering":
+                    "(5 Intellect points). You speak telepathically with any or all machines within 1 mile (1.5 km). "
+                    "You can ask one basic question about themselves or anything happening near them and receive a "
+                    "simple answer. For example, while in an area with many machines, you could ask “Where is the "
+                    "ravage bear?” and if the creature is within a mile of you, one or more machines will probably "
+                    "provide the answer. Action."
+            },
+            '6': {"CHOICE":{
+                "Improved Machine Companion":
+                    "Your machine companion improves, becoming a level 5 creature with the ability either to fly a "
+                    "long distance each round (and carry you) for up to ten minutes at a time, or to carry an extra "
+                    "cypher for you that doesn’t count against your cypher limit. Enabler.",
+                "Control Machine":
+                    "(6 Intellect points) You can attempt to control the functions of any machine, intelligent or "
+                    "otherwise, within short range for ten minutes. Action."
+            }}
         }
     },
     "Wears a Sheen of Ice": {
-        "Description": "",
-        "Connection": [],
+        "Description": "Through your studies, you have learned to focus your natural talents to command the powers of "
+                       "ice and cold. People might refer to you as an ice mage. Sometimes ice mages are thought to "
+                       "come into conflict with those known as fire mages, but this is a fallacy believed by ordinary "
+                       "folks more than anything based in truth.",
+        "Connection": [
+            "Pick one other PC. Due to a quirk of the numenera, if that character is standing next to you when you "
+            "use your Ice Armor ability, they are also protected by a sheen of ice. (They do not get the added "
+            "protection of your Resilient Ice Armor ability.)",
+            "Pick one other PC. For a reason unknown to you, their very presence seems to heat the air around you, "
+            "making it more difficult to command the powers of ice and cold. If they are within immediate range, "
+            "their presence occasionally hinders your attempts to hit a target with a focus ability.",
+            "Pick one other PC. That person is especially susceptible to the cold that radiates from you. How they "
+            "handle that vulnerability is up to them.",
+            "Pick one other PC. The two of you have a long history and almost always disagree about the best way to "
+            "handle situations."
+        ],
         "Additional Equipment": [],
-        "Core Features": {},
-        "Major Effect Suggestions": "",
-        "Minor Effect Suggestions": "",
+        "Core Features": {
+            "Ice Abilities":
+                "If you possess abilities that would normally use force or other energy, they instead use cold and "
+                "ice. For example, a force blast is a ray of frost. This alteration changes nothing other than the "
+                "type of damage. As another example, Barrier creates a wall of ice. This alteration changes nothing "
+                "except the wall’s appearance and the fact that it takes 2 additional points of damage from fire."
+        },
+        "Major Effect Suggestions": "The target is covered in ice that slows its movement and hinders its tasks for "
+                                    "one minute.",
+        "Minor Effect Suggestions": "The surface around the target becomes slick and difficult to stand on.",
         "Tiers": {
-            '1': {},
-            '2': {},
-            '3': {},
-            '4': {},
-            '5': {},
-            '6': {}
+            '1': {
+                "Ice Armor":
+                    "(1 Intellect point). When you wish it, your body is covered in a sheen of ice for ten minutes "
+                    "that gives you +1 to Armor. While the sheen is active, you feel no discomfort from normal cold "
+                    "temperatures and have an additional +2 to Armor versus cold damage specifically. Enabler."
+            },
+            '2': {
+                "Frost Touch":
+                    "(1 Intellect point) Your hands become so cold that the next time you touch a creature, you "
+                    "inflict 3 points of damage. Alternatively, you can use this ability on a weapon, and for ten "
+                    "minutes, it inflicts 1 additional point of damage from the cold. Action for touch; enabler for "
+                    "weapon."
+            },
+            '3': {"CHOICE":{
+                "Freezing Touch":
+                    "(4 Intellect points) Your hands become so cold that, in addition to inflicting damage as "
+                    "described under Frost Touch, your touch freezes solid a living target of your size or smaller, "
+                    "rendering it immobile for one round. Action.",
+                "Ice Creation":
+                    "(4+ Intellect points). You create a solid object of ice that is your size or smaller. The object "
+                    "is crude and can have no moving parts, so you can make a sword, a shield, a short ladder, and so "
+                    "on. Your ice objects are as strong as iron, but if you’re not in constant contact with them, they "
+                    "function for only 1d6 + 6 rounds before breaking or melting. For example, you can make and wield "
+                    "an ice sword, but if you give it to another PC, the sword won’t last as long for that character. "
+                    "In addition to the normal options for using Effort, you can choose to use Effort to create "
+                    "objects larger than you. For each level of Effort used in this way, you can create an object up "
+                    "to twice again as large as you. Action."
+            }},
+            '4': {
+                "Resilient Ice Armor":
+                    "The sheen of ice you generate using your Ice Armor ability gives you an additional +1 to Armor. "
+                    "Enabler."
+            },
+            '5': {
+                "Cold Burst":
+                    "(5+ Intellect points). You emit a burst of cold in all directions, up to short range. All "
+                    "within the burst take 5 points of damage. If you apply Effort to increase the damage rather than "
+                    "to ease the task, you deal 2 additional points of damage per level of Effort (instead of 3 "
+                    "points); however, targets in the area take 1 point of damage even if you fail the attack roll. "
+                    "Action."
+            },
+            '6': {"CHOICE": {
+                "Ice Storm":
+                    "You attempt an additional Intellect task as part of your Cold Burst attack, and if successful, "
+                    "you blind foes for up to one minute with a layer of freezing ice. All tasks of blinded creatures "
+                    "are hindered by two steps. Enabler.",
+                "Winter Gauntlets":
+                    "When you use Frost Touch, you inflict a total of 5 points of damage if you touch a creature, or "
+                    "+2 points of damage if you infuse a weapon. In addition, damaged targets are frozen in place (if "
+                    "standing on a solid surface) and can’t move from their location until they use an action to "
+                    "break free. The target can still attack and defend. Action for touch; enabler for weapon."
+            }}
         }
     },
     "Wields Power with Precision": {
-        "Description": "",
-        "Connection": [],
-        "Additional Equipment": [],
+        "Description": "Not only are you blessed with a great command of the numenera, but you are also trained to "
+                       "exploit esoteries in ways that elevate you above other Nanos. Some people believe that those "
+                       "who perform esoteries are born with the ability, but you know that skill and intelligence "
+                       "play important roles. The ancients created the numenera through knowledge, discovery, and "
+                       "intellect, and to use it properly, you must follow the same path.",
+        "Connection": [
+            "Pick one other PC. You’ve placed an immutable, one-time ward that renders them immune to the esoteries "
+            "you perform unless they want to be affected.",
+            "Pick one other PC. Due to some quirk of the numenera, you can occasionally (and accidentally) share your "
+            "powers with them, which gives them an asset on any task they attempt using their esoteries.",
+            "Pick one other PC. That character doesn’t seem to trust or like you, but you feel compelled to win "
+            "them over.",
+            "Pick one other PC. You’ve noticed that they have a book in their possession that you’d very much like "
+            "to study, but you’re unsure how to ask them about it."
+        ],
+        "Additional Equipment": ["an additional book about the numenera."],
         "Core Features": {},
-        "Major Effect Suggestions": "",
-        "Minor Effect Suggestions": "",
+        "Major Effect Suggestions": "The special ability terrifies the target, who uses its next two turns to flee.",
+        "Minor Effect Suggestions": "The special ability overwhelms and dazzles the target for one round, "
+                                    "hindering it.",
         "Tiers": {
-            '1': {},
-            '2': {},
-            '3': {},
-            '4': {},
-            '5': {},
-            '6': {}
+            '1': {
+                "Genius": "Your Intellect Pool increases by 5 points. Enabler."
+            },
+            '2': {
+                "Training and Precision":
+                    "You are trained in all esoteries. As a result, you ease any task involved in the use of "
+                    "an esotery. Enabler.",
+            },
+            '3': {"CHOICE":{
+                "Enhanced Esoteries":
+                    "Your esoteries that have durations last twice as long. Your esoteries that have short ranges "
+                    "reach to long range instead. Your esoteries that inflict damage deal 1 additional point of "
+                    "damage. Enabler.",
+                "Versatile Mind":
+                    "When you make a Speed defense roll, you can use your Intellect in place of your Speed. Enabler."
+            }},
+            '4': {
+                "Greater Repertoire":
+                    "You can learn one additional esotery of fourth tier or lower. Enabler."
+            },
+            '5': {
+                "Greater Training":
+                    "You are specialized in all esoteries. As a result, you ease any task involved in the use of an "
+                    "esotery by two steps. Enabler."
+            },
+            '6': {"CHOICE": {
+                "Enhanced Esoteries":
+                    "If you chose Enhanced Esoteries as your tier 3 option, your esoteries that have durations last "
+                    "three times as long. Your esoteries that have short ranges reach to very long range instead. "
+                    "Your esoteries that inflict damage deal 2 additional points of damage. If you didn’t take "
+                    "Enhanced Esoteries at tier 3, you gain the advantages noted there now. Enabler.",
+                "Supra-Genius":
+                    "Your Intellect Pool increases by 5, and your Intellect Edge increases by 1. Enabler."
+            }}
         }
     },
     "Wields Two Weapons at Once": {
-        "Description": "",
-        "Connection": [],
-        "Additional Equipment": [],
+        "Description": "You bear steel with both hands, ready to take on any foe. You fight with two weapons in "
+                       "melee, sometimes called dual wielding. A fearsome warrior, quick and strong, you believe "
+                       "that the best defense is a strong offense.",
+        "Connection": [
+            "Pick one other PC. You have trained with this character so much that if the two of you stand back to "
+            "back in a fight, you both gain an asset to Speed defense tasks.",
+            "Pick one other PC. This character always seems to inadvertently foil your actions, or at least make "
+            "them more difficult. If they are within immediate range, actions related to this focus are hindered.",
+            "Pick one other PC. You recently had a weapon go missing, and you’re becoming convinced that they took "
+            "it. Whether or not they did is up to them.",
+            "Pick one other PC. You used to dislike them immensely, but as you get to know this person, you’re "
+            "growing more fond of them against your better judgment."
+        ],
+        "Additional Equipment": ["an additional light melee weapon."],
         "Core Features": {},
-        "Major Effect Suggestions": "",
-        "Minor Effect Suggestions": "",
+        "Major Effect Suggestions": "You can make an immediate additional attack with one of your weapons.",
+        "Minor Effect Suggestions": "The target is intimidated and flees as its next action.",
         "Tiers": {
-            '1': {},
-            '2': {},
-            '3': {},
-            '4': {},
-            '5': {},
-            '6': {}
+            '1': {
+                "Dual Light Wield":
+                    "You can use two light weapons at the same time, making two separate attacks on your turn as a "
+                    "single action. You remain limited by the amount of Effort you can apply on one action, but "
+                    "because you make separate attacks, your opponent’s Armor applies to both. Anything that modifies "
+                    "your attack or damage applies to both attacks, unless it’s specifically tied to one of the "
+                    "weapons. Enabler."
+            },
+            '2': {
+                "Double Strike":
+                    "(3 Might points). When you wield two weapons, you can choose to make one attack roll against a "
+                    "foe. If you hit, you inflict damage with both weapons plus 2 additional points of damage, and "
+                    "because you made a single attack, the target’s Armor is subtracted only once. Action."
+            },
+            '3': {"CHOICE":{
+                "Dual Medium Wield":
+                    "You can use two light weapons or medium weapons at the same time (or one light weapon and one "
+                    "medium weapon), making two separate attacks on your turn as a single action. This ability "
+                    "otherwise works like the Dual Light Wield ability. Enabler.",
+                "Precise Cut": "You inflict +1 damage with light weapons. Enabler."
+            }},
+            '4': {
+                "Dual Defense":"When you wield two weapons, you are trained in Speed defense tasks. Enabler."
+            },
+            '5': {
+                "Dual Distraction":
+                    "(1+ Speed points) When you wield two weapons, your opponent’s next attack is hindered, and if "
+                    "you apply Effort to your next attack against that same foe, you get a free level of Effort on "
+                    "the task. Enabler."
+            },
+            '6': {"CHOICE":{
+                "Disarming Attack":
+                    "(5 Speed points). You attempt a Speed task to disarm a foe as part of your melee attack. If you "
+                    "succeed, your attack inflicts 3 additional points of damage and the target’s weapon is knocked "
+                    "from their grip, landing up to 20 feet (6 m) away. If you fail, you still attempt your normal "
+                    "attack, but you don’t inflict the extra damage or disarm the opponent if you hit. Action.",
+                "Whirling Dervish":
+                    "When you wield two weapons, you can attack up to six times in one round as a single action, "
+                    "but you must make each attack against a different foe. Make a separate attack roll for each "
+                    "attack. You remain limited by the amount of Effort you can apply on one action, but because "
+                    "you make separate attacks, Armor applies to each of them. Anything that modifies your attack or "
+                    "damage applies to all attacks (positively or negatively), unless it’s specifically tied to one "
+                    "of the weapons, in which case it applies to only half of the attacks. Enabler."
+            }}
         }
     },
     "Works the Back Alleys": {
-        "Description": "",
-        "Connection": [],
-        "Additional Equipment": [],
+        "Description": "The thief, the burglar, the pickpocket: these are the dangerous individuals who haunt the "
+                       "back alleys of every community. You are a thief in a city or town, making your livelihood at "
+                       "the expense of the wealthy. Your talents, however, prepare you for all kinds of pursuits, "
+                       "even when you’re not crouching in an alley or climbing into a window.",
+        "Connection": [
+            "Pick one other PC. The character knew you beforehand and convinced you to leave your life of crime for "
+            "other pursuits—at least temporarily.",
+            "Pick one other PC. A while back, you attempted to “borrow” something from this person, but they caught "
+            "you in the process. You managed to convince them that it was a simple misunderstanding, but they may not "
+            "entirely trust you.",
+            "Pick one other PC. You never seem to be able to hide so that this person can’t see you.",
+            "Pick one other PC. This character knows your real identity (if it’s a secret) or that you work secretly "
+            "as a thief (if it’s a secret) and has kept the knowledge safe so far. It’s up to them whether they "
+            "continue to do so."
+        ],
+        "Additional Equipment": ["a bag of light tools."],
         "Core Features": {},
-        "Major Effect Suggestions": "",
-        "Minor Effect Suggestions": "",
+        "Major Effect Suggestions": "You can immediately take a second action during this turn.",
+        "Minor Effect Suggestions": "You can immediately attempt to hide after this action.",
         "Tiers": {
-            '1': {},
-            '2': {},
-            '3': {},
-            '4': {},
-            '5': {},
-            '6': {}
+            '1': {
+                "Thief": "You are trained in sneaking, pickpocketing, and lockpicking tasks. Enabler."
+            },
+            '2': {
+                "Underworld Contacts":
+                    "You know many people in a variety of communities who engage in illegal activities. These people "
+                    "are not necessarily your friends and might not be trustworthy, but they recognize you as a peer. "
+                    "You and the GM should work out the details of your underworld contacts. Enabler."
+            },
+            '3': {"CHOICE":{
+                "Pull a Fast One":
+                    "(3 Intellect points) When you’re running a con, picking a pocket, fooling or tricking a dupe, "
+                    "sneaking something by a guard, and so on, you gain an asset on the task. Enabler.",
+                "Guild Training":
+                    "Your type abilities that have durations last twice as long. Your type abilities that have short "
+                    "ranges reach to long range instead. Your type abilities that inflict damage deal 1 additional "
+                    "point of damage. Enabler."
+            }},
+            '4': {
+                "Master Thief":
+                    "You are trained in climbing, escaping from bonds, slipping through narrow places, and other "
+                    "contortionist moves. Enabler."
+            },
+            '5': {
+                "Dirty Fighter":
+                    "(2 Speed points). You distract, blind, annoy, hamper, or otherwise interfere with a foe, "
+                    "hindering their attacks and defenses for one minute. Action."
+            },
+            '6': {"CHOICE":{
+                "Alley Rat":
+                    "(6 Intellect points). While in a city, you find or create a significant shortcut, secret "
+                    "entrance, or emergency escape route where it looked like none existed. Doing so requires that "
+                    "you succeed on an Intellect action whose difficulty is set by the GM based on the situation. "
+                    "You and the GM should work out the details. Action.",
+                "All-Out Con":
+                    "(7 Intellect points). You put everything into it. You add three free levels of Effort to the "
+                    "next task you attempt. You can’t use this ability again until after you’ve taken a ten-hour "
+                    "recovery action. Action."
+            }}
         }
     },
     "Works Miracles": {
-        "Description": "",
-        "Connection": [],
+        "Description": "You manipulate matter and time to help others and are beloved by everyone you encounter. Some "
+                       "people consider you a representative of the gods or a power from beyond this world. Perhaps "
+                       "they’re right—transdimensional experiments in the prior worlds might be what created the "
+                       "energies that you now wield.",
+        "Connection": [
+            "Pick one other PC. This character quietly suspects that you’re a messiah or supernatural being.",
+            "Pick one other PC. This person knows a secret of yours, and you desperately hope that they do not tell "
+            "anyone. You can choose whether or not you’re aware of their suspicion.",
+            "Pick one other PC. This character believes that you cured someone close to them of a deadly disease, and "
+            "they are grateful. You aren’t sure whether you actually helped or if that person wasn’t as sick as was "
+            "thought.",
+            "Pick one other PC. You secretly believe that this person might be a hypochondriac, and you’re never "
+            "sure whether they actually need your help."
+        ],
         "Additional Equipment": [],
         "Core Features": {},
-        "Major Effect Suggestions": "",
-        "Minor Effect Suggestions": "",
+        "Major Effect Suggestions": "The target is healed for 2 additional points.",
+        "Minor Effect Suggestions": "The target is healed for 1 additional point.",
         "Tiers": {
-            '1': {},
-            '2': {},
-            '3': {},
-            '4': {},
-            '5': {},
-            '6': {}
+            '1': {
+                "Healing Touch":
+                    "(1 Intellect point) With a touch, you restore 1d6 points to one stat Pool of any creature. "
+                    "This ability is a difficulty 2 Intellect task. Each time you attempt to heal the same creature, "
+                    "the task difficulty increases by one step. The difficulty returns to 2 after that creature rests "
+                    "for ten hours. Action."
+            },
+            '2': {
+                "Alleviate": "(3 Intellect points) You attempt to cancel or cure one malady (such as disease or "
+                             "poison) in one creature. Action."
+            },
+            '3': {"CHOICE":{
+                "Font of Healing. With your approval, other creatures can touch you and regain 1d6 points to either "
+                "their Might Pool or their Speed Pool. This healing costs them 2 Intellect points. A single creature "
+                "can benefit from this ability only once each day. Enabler.",
+                "Miraculous Health. When you would descend a step on the damage track, you can attempt a Might task "
+                "to resist, with a difficulty equal to the level of the foe or effect that harmed you. If successful, "
+                "you don’t descend the step and you regain 1 point in any Pool that is bereft of points. You can’t "
+                "use this ability again until after your next ten-hour rest. Enabler.",
+            }},
+            '4': {
+                "Inspiration":
+                    "(4 Intellect points). Through mental inspiration and the manipulation of time, one creature "
+                    "you choose within short range is granted an additional, immediate action, which it can take "
+                    "out of turn. Action."
+            },
+            '5': {
+                "Undo":
+                    "(5 Intellect points). You turn back time a few seconds, effectively undoing a single creature’s "
+                    "most recent action. That creature can then immediately repeat the same action or try something "
+                    "different. Action."
+            },
+            '6': {"CHOICE":{
+                "Greater Healing Touch":
+                    "(4 Intellect points) You touch a creature and restore its Might Pool, Speed Pool, and Intellect "
+                    "Pool to their maximum values, as if it were fully rested. A single creature can benefit from this "
+                    "ability only once each day. Action.",
+                "Restore Life":
+                    "(9+ Intellect points) You can attempt to restore life to a dead creature of up to level 3, as "
+                    "long as the corpse is no more than a day old and is mostly intact. You can also attempt to "
+                    "restore life to a corpse that is much older but is especially well preserved. The difficulty "
+                    "of the Intellect task is equal to the level of the creature you’re attempting to restore to "
+                    "life. For each additional level of Effort applied, you can attempt to restore the life of a "
+                    "creature whose level is 1 higher. When first restored to life, a creature is dazed for at least "
+                    "a day, and all tasks they attempt are hindered. Action; one minute to initiate."
+            }}
         }
-    },
+    },  # End Discovery Foci, Start Destiny Foci
     "Absorbs Energy": {},
     "Acts Without Consequence": {},
     "Adjures the Leviathan": {},
