@@ -34,7 +34,7 @@ class CypherPC:
     _major_effect_suggestions = []
     _intrusion_options = {}
 
-    _damage_track = ["Fine", "Impaired", "Debilitated", "Dead"]
+    _damage_track = ["Hale", "Impaired", "Debilitated", "Dead"]
 
     def __init__(self, name, tier=1, descriptor="adjective", char_type="noun", focus="verbs", skills={},
                  max_might=10, max_speed=10, max_int=10, might_edge=0, speed_edge=0, int_edge=0, armor=0,

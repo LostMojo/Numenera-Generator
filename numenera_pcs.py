@@ -12,19 +12,20 @@ def get_descriptor(adjective): return data.types[adjective]
 def get_focus(verb): return data.types[verb]
 
 
-def type_list(): return list(data.types.keys())
+def type_list(): return list(data.discovery_types.keys())
 
 
-def descriptor_list(): return list(data.descriptors.keys())
+def descriptor_list(): return list(data.discovery_descriptors.keys())
 
 
-def focus_list(): return list(data.foci.keys())
+def focus_list(): return list(data.discovery_foci.keys())       # temporary change to limit to discovery
 
 
 class NumeneraPC(CypherPC):
     _type_stat_base = data.type_template["Base Stats"]
     _assignable_points = data.assignable_stat_points
     _assignable_edge_points = 0
+    _damage_track = ["Hale", "Impaired", "Debilitated", "Dead"]
 
     _weapons = []
     _community_bonus = ""
