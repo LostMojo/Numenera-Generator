@@ -43,7 +43,12 @@ class NumeneraPC(CypherPC):
     _attacks = {}
     # edge base?
 
-    def shins(self): return self._shins
+    def shins(self): return self._items["Shins"]
+    def set_shins(self, amount=0): self._items["Shins"] = amount
+    def add_shins(self, amount=1): self._items["Shins"] = self._items["Shins"] + amount
+    def lose_shins(self, amount=1): self._items["Shins"] = self._items["Shins"] - amount
+
+    def artifacts(self): return self._items["Artifacts"]
 
     def _configure_character(self):
         self.new_type(self.type())
@@ -99,8 +104,8 @@ class NumeneraPC(CypherPC):
             d = data.foci[focus]
             self._connections.append(d["Connection"])       # appends a choice of connections
             self._add_dict_inventory(d["Additional Equipment"])
-            self._major_effect_suggestions.append(d["Major Effect Suggestions"])
-            self._minor_effect_suggestions.append(d["Minor Effect Suggestions"])
+            self._major_effect_suggestions.extend(d["Major Effect Suggestions"])
+            self._minor_effect_suggestions.extend(d["Minor Effect Suggestions"])
             self._update_tier_abilities(d["Tiers"])
         else:
             self._reset_character()
@@ -115,36 +120,40 @@ class NumeneraPC(CypherPC):
                     self._abilities[str(t)] = tier_dictionary[str(t)]
             # no support for over-levelling
 
-    def _add_dict_inventory(self, d):
+    def _add_dict_inventory(self, d, item_pouch=_items):        # item_pouch used to find which dictionary to look in
         for group in d:
-            if group in self._items:
-                if self._items[group] is None:
-                    self._items[group] = d[group]
-                elif isinstance(self._items[group], list):
-                    self._items[group].extend(d[group])
-                elif isinstance(self._items[group], dict):
-                    self._items[group] = self._items[group]
-                elif isinstance(self._items[group], int):
-                    self._items[group] = self._items[group]+d[group]
-                # print(str(group) + ": " + str(self._items[group]))
+            if group in item_pouch:
+                if item_pouch[group] is None:
+                    item_pouch[group] = d[group]
+                elif isinstance(item_pouch[group], list):
+                    item_pouch[group].extend(d[group])
+                elif isinstance(item_pouch[group], dict):
+                    self._add_dict_inventory(d[group], item_pouch[group])
+                elif isinstance(item_pouch[group], int):
+                    item_pouch[group] = item_pouch.setdefault(group, 0)+d[group]
             else:
-                self._items[group] = d[group]
+                item_pouch[group] = d[group]
+
+    def _print_items(self):
+        for key in self._items:
+            print(str(key) + ": " + str(self._items[key]))
 
     def randomize_character(self):
         self._descriptor = random.choice(descriptor_list())
         self._type = random.choice(type_list())
         self._focus = random.choice(focus_list())
+        # self._configure_character()
 
     def _reset_character(self):
         pass
 
 
 if __name__ == "__main__":
-    teddy = NumeneraPC("Theodore", tier=6, char_type="Jack", descriptor="Swift", focus="Controls Beasts")
+    teddy = NumeneraPC("Theodore", tier=6, char_type=random.choice(type_list()),
+                       descriptor=random.choice(descriptor_list()), focus=random.choice(descriptor_list()))
     print(teddy.describe())
     print(teddy.max_pools())
-    teddy.randomize_character()
-    print(teddy.describe())
+    teddy._print_items()
 """    for tier in teddy.abilities():
         print(str(tier))
         for key in teddy.abilities()[tier]:
