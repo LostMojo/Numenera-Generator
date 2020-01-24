@@ -1,7 +1,7 @@
 assignable_stat_points = 6
 
 type_template = {
-    "Base Stats": [7, 7, 7],
+    "Base Stats": [8, 8, 8],
     "Starting Edge": [0, 0, 0],
     "Weapon Proficiencies": [],
     "Class Skills": [],
@@ -14,6 +14,7 @@ type_template = {
         "Oddities": [],
         "Iotum": {},
         "Parts": 0,
+        "Artifacts": []
     },
     "Default Cyphers": [],
     "Default Oddity": [],
@@ -3705,7 +3706,7 @@ discovery_foci = {
             "Pick one other PC. This character is so enamored of your swashbuckling, entertaining ways during combat "
             "that they sometimes forget to take their own action."
         ],
-        "Additional Equipment": {"Equipment:"["Extremely Stylish Clothes", "A Jeweled Weapon"]},
+        "Additional Equipment": {"Equipment": ["Extremely Stylish Clothes", "A Jeweled Weapon"]},
         "Core Features": {},
         "Major Effect Suggestions": "Make an additional attack with your weapon on your turn.",
         "Minor Effect Suggestions": "The target is so dazzled by your style that it is dazed for one round, during "

@@ -12,10 +12,10 @@ def get_descriptor(adjective): return data.types[adjective]
 def get_focus(verb): return data.types[verb]
 
 
-def type_list(): return list(data.discovery_types.keys())
+def type_list(): return list(data.types.keys())
 
 
-def descriptor_list(): return list(data.discovery_descriptors.keys())
+def descriptor_list(): return list(data.descriptors.keys())
 
 
 def focus_list(): return list(data.discovery_foci.keys())       # temporary change to limit to discovery
@@ -30,8 +30,15 @@ class NumeneraPC(CypherPC):
     _weapons = []
     _community_bonus = ""
 
-    _oddities = []
-    _shins = 0
+    _items = {
+        "Shins": 0,
+        "Equipment": [],
+        "Cyphers": [],
+        "Oddities": [],
+        "Iotum": {},
+        "Parts": 0,
+        "Artifacts": []
+    }
 
     _attacks = {}
     # edge base?
@@ -60,7 +67,7 @@ class NumeneraPC(CypherPC):
                 self.overwrite_skill(skill)
             self._intrusion_options.update(d["Class Intrusions"])
             self._cypher_limit = d["Cypher Limit"]
-            self._items += d["Starting Equipment"]
+            self._add_dict_inventory(d["Starting Equipment"])   # items
             # optional default cyphers & oddity?
             self._community_bonus = d["Community Bonus"]
             # pick a connection? self._connections.update(d["Connections"])
@@ -81,7 +88,7 @@ class NumeneraPC(CypherPC):
             for skill in d["Inabilities"]:
                 self.add_hindrance(skill)
             self._abilities['1'].update(d["Features"])        # separate variable for descriptor abilities?
-            self._items.append(d["Additional Equipment"])
+            self._add_dict_inventory(d["Additional Equipment"])
             # Link to starting adventure?
         else:
             self._reset_character()
@@ -91,7 +98,7 @@ class NumeneraPC(CypherPC):
         if focus in data.foci:
             d = data.foci[focus]
             self._connections.append(d["Connection"])       # appends a choice of connections
-            self._items += d["Additional Equipment"]
+            self._add_dict_inventory(d["Additional Equipment"])
             self._major_effect_suggestions.append(d["Major Effect Suggestions"])
             self._minor_effect_suggestions.append(d["Minor Effect Suggestions"])
             self._update_tier_abilities(d["Tiers"])
@@ -107,6 +114,21 @@ class NumeneraPC(CypherPC):
                 else:
                     self._abilities[str(t)] = tier_dictionary[str(t)]
             # no support for over-levelling
+
+    def _add_dict_inventory(self, d):
+        for group in d:
+            if group in self._items:
+                if self._items[group] is None:
+                    self._items[group] = d[group]
+                elif isinstance(self._items[group], list):
+                    self._items[group].extend(d[group])
+                elif isinstance(self._items[group], dict):
+                    self._items[group] = self._items[group]
+                elif isinstance(self._items[group], int):
+                    self._items[group] = self._items[group]+d[group]
+                # print(str(group) + ": " + str(self._items[group]))
+            else:
+                self._items[group] = d[group]
 
     def randomize_character(self):
         self._descriptor = random.choice(descriptor_list())
