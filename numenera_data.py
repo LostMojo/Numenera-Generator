@@ -2270,7 +2270,7 @@ discovery_descriptors = {
 destiny_descriptors = {
     "Adaptable": {
         "Stat Bonuses": [0, 0, 0],
-        "Skills": ["Plesant Socail Interactions"],
+        "Skills": ["Pleasant Social Interactions"],
         "Inabilities": [],
         "Features": {
             "Versatile":

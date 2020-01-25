@@ -22,7 +22,7 @@ class CypherPC:
     _cypher_limit = 1
     _cyphers = {}
     _artifacts = {}
-    _items = []
+    _items = dict()
 
     _connections = []
     _core_features = {}
@@ -186,6 +186,30 @@ class CypherPC:
             del self._skills[skill]
         else:
             raise ValueError("Cannot delete skill {0} because {1} doesn't know it".format(skill, self._name))
+
+    def print_skills(self):
+        for skill in self._skills:
+            print(str(skill) + ": " + str(self._skills[skill]))
+
+    def _add_dict_inventory(self, d, item_pouch):        # item_pouch used to find which dictionary to look in
+        """A method that takes a dictionary of items sorted into their categories, and adds them to their right
+        "compartment", recursive, dictionaries inside dictionaries can be sorted"""
+        for group in d:
+            if group in item_pouch:
+                if item_pouch[group] is None:
+                    item_pouch[group] = d[group]
+                elif isinstance(item_pouch[group], list):
+                    item_pouch[group].extend(d[group])
+                elif isinstance(item_pouch[group], dict):
+                    self._add_dict_inventory(d[group], item_pouch[group])
+                elif isinstance(item_pouch[group], int):
+                    item_pouch[group] = item_pouch.setdefault(group, 0)+d[group]
+            else:
+                item_pouch[group] = d[group]
+
+    def print_items(self):
+        for key in self._items:
+            print(str(key) + ": " + str(self._items[key]))
 
     def skill_check(self, difficulty, skill="", effort=0):
         if skill in self._skills:
