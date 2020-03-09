@@ -34,6 +34,8 @@ class CypherPC:
     _major_effect_suggestions = []
     _intrusion_options = {}
 
+    _link_to_starting_adventure = []
+
     _damage_track = ["Hale", "Impaired", "Debilitated", "Dead"]
 
     def __init__(self, name, tier=1, descriptor="adjective", char_type="noun", focus="verbs", skills={},
@@ -120,8 +122,8 @@ class CypherPC:
             self._exp = exp
         else: raise ValueError("PC exp must be an int between 0 and 10")
 
-        _max_effort = max_effort
-        _damage_track_position = damage_track_position
+        self._max_effort = max_effort
+        self._damage_track_position = damage_track_position
 
         self._configure_character()
 
@@ -143,15 +145,24 @@ class CypherPC:
     def might_edge(self): return self.edge_list()[self.which_stat("might")]
     def speed_edge(self): return self.edge_list()[self.which_stat("speed")]
     def int_edge(self): return self.edge_list()[self.which_stat("int")]
+    def damage_track_position(self): return self._damage_track_position
     def armor(self): return self._armor
     def exp(self): return self._exp
     def abilities(self): return self._abilities
+    def link_to_starting_adventure(self): return self._link_to_starting_adventure
+    def connections(self): return self._connections
+
+    def damage_status(self):
+        try:
+            return self._damage_track[self.damage_track_position()]
+        except IndexError:
+            return "Dead"
 
     def which_stat(self, stat):
         return self._stat_map[str(stat)]
 
     def _configure_character(self):
-        pass
+        self.heal_full()
 
     def describe(self):
         return ("{name} is a {adjective} {noun} who {verbs}.".format(name=self._name, adjective=self._descriptor,
@@ -164,6 +175,16 @@ class CypherPC:
         self._assigned_points[i] += 1
         self._assignable_points -= 1
 
+    def print_pools(self):
+        left = 3
+        right = 3
+        print("MIGHT".center(left + right + 1))
+        print(str(self.current_might()).ljust(left) + '/' + str(self.max_might()).rjust(right))
+        print("SPEED".center(left + right + 1))
+        print(str(self.current_speed()).ljust(left) + '/' + str(self.max_speed()).rjust(right))
+        print("INT".center(left + right + 1))
+        print(str(self.current_int()).ljust(left) + '/' + str(self.max_int()).rjust(right))
+
     def rename(self, name): self._name = name
     def change_descriptor(self, descriptor): self._descriptor = descriptor
     def change_type(self, char_type): self._type = char_type
@@ -175,10 +196,10 @@ class CypherPC:
         else:
             self._skills[skill] = training
 
-    def overwrite_skill(self, skill="Unnamed", training = 1):
+    def overwrite_skill(self, skill="Unnamed", training=1):
         self._skills[skill] = training
 
-    def add_hindrance(self, skill="Unnamed", hinder_level = 1):
+    def add_hindrance(self, skill="Unnamed", hinder_level=1):
         self.add_skill(skill, -1*hinder_level)
 
     def remove_skill(self, skill="Unnamed"):
@@ -240,6 +261,7 @@ class CypherPC:
                 return False
         starting_pool = self.which_stat(targeted_pool)
         stats = self.current_pools()
+        new_damage_track = 0
         for i in range(len(stats)):
             pool = (starting_pool+i)%len(stats)
             stats[pool] -= damage
@@ -248,6 +270,9 @@ class CypherPC:
             else:
                 damage = -1 * stats[pool]  # removes negative
                 stats[pool] = 0
+                new_damage_track += 1
+        if new_damage_track > self.damage_track_position():
+            self._damage_track_position = new_damage_track
         return True
 
     def recovery_roll(self, targeted_pool="int", beyond_max=False, addition=0, set_roll=-1):
@@ -273,6 +298,13 @@ class CypherPC:
     def heal_full(self):
         self._current_pools = copy.deepcopy(self.max_pools())
 
+    def print_connections(self):
+        for g in self.connections():
+            if not isinstance(g, str):
+                print("Choice: " + str(g))
+            else:
+                print(g)
+
     def gain_exp(self, amount=1):
         self._exp += amount
 
@@ -295,6 +327,18 @@ class CypherPC:
 
     def _reset_character(self):
         pass
+
+    def print_character(self):
+        print("NAME: \t" + str(self.name()))
+        print("STATUS:\t" + str(self.damage_status()))
+        self.print_pools()
+        print("SKILLS: ")
+        self.print_skills()
+        print("ITEMS: ")
+        self.print_items()
+        print("EXP: \t" + str(self.exp()))
+        print("CONNECTIONS: ")
+        self.print_connections()
 
 
 def record_pc(self, pc, filename):

@@ -56,12 +56,14 @@ class NumeneraPC(CypherPC):
     def iotum(self): return self._items["Iotum"]
 
     def _configure_character(self):
+        self._connections = []
         self.new_type(self.type())
         self.new_descriptor(self.descriptor())
         self.new_focus(self.focus())
         for skill in ["Understanding Numenera", "Crafting Numenera", "Salvaging Numenera"]:
             if skill not in self._skills:
                 self.add_hindrance(skill)
+        self.heal_full()
 
     def new_type(self, char_type="Noun"):
         if char_type in data.types:
@@ -82,7 +84,7 @@ class NumeneraPC(CypherPC):
             self._cypher_limit = d["Cypher Limit"]
             self._add_dict_inventory(d["Starting Equipment"], self._items)   # items
             # optional default cyphers & oddity
-            # pick a connection? self._connections.update(d["Connections"])
+            self._connections.append(d["Connections"])
             self._update_tier_abilities(d["Tiers"])
         else:
             self._type = char_type
@@ -101,7 +103,7 @@ class NumeneraPC(CypherPC):
                 self.add_hindrance(skill)
             self._abilities['1'].update(d["Features"])        # separate variable for descriptor abilities?
             self._add_dict_inventory(d["Additional Equipment"], self._items)
-            # Link to starting adventure?
+            self._link_to_starting_adventure.append(d["Link to Starting Adventure"])
         else:
             self._reset_character()
             self._descriptor = descriptor
@@ -127,11 +129,15 @@ class NumeneraPC(CypherPC):
                     self._abilities[str(t)] = tier_dictionary[str(t)]
             # no support for over-levelling
 
-    def randomize_character(self):
+    def randomize_character(self, truly_random=False):
         self._descriptor = random.choice(descriptor_list())
         self._type = random.choice(type_list())
         self._focus = random.choice(focus_list())
         # self._configure_character()
+        if truly_random:
+            for connection in self.connections():
+                if not isinstance(connection, str):
+                    self._connections[self.connections().index(connection)] = random.choice(connection)
 
     def _reset_character(self):
         pass
@@ -140,10 +146,10 @@ class NumeneraPC(CypherPC):
 if __name__ == "__main__":
     teddy = NumeneraPC("Theodore", tier=6, char_type=random.choice(type_list()),
                        descriptor=random.choice(descriptor_list()), focus=random.choice(focus_list()))
+    teddy.randomize_character(True)
     print(teddy.describe())
-    print(teddy.max_pools())
-    teddy.print_items()
-    teddy.print_skills()
+    # print(teddy.max_pools())
+    teddy.print_character()
 """    for tier in teddy.abilities():
         print(str(tier))
         for key in teddy.abilities()[tier]:

@@ -2309,7 +2309,7 @@ destiny_descriptors = {
     },
     "Beneficent": {
         "Stat Bonuses": [0, 0, 2],
-        "Skills": ["Pleasant Social Interaction", "putting other people at ease", "gaining others’ trust."],
+        "Skills": ["Pleasant Social Interaction", "putting other people at ease", "gaining others’ trust"],
         "Inabilities": [],
         "Features": {
             "Devoted":
@@ -2455,7 +2455,7 @@ destiny_descriptors = {
     },
     "Empirical": {
         "Stat Bonuses": [0, 0, 4],
-        "Skills": ["All actions related to conducting tests to find proof, discern the truth, or glean information."],
+        "Skills": ["All actions related to conducting tests to find proof, discern the truth, or glean information"],
         "Inabilities": [],
         "Features": {
             "Quick Study":
