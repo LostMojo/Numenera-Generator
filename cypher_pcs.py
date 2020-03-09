@@ -355,7 +355,7 @@ class CypherPC:
         print("NAME: \t" + str(self.name()))
         print("STATUS:\t" + str(self.damage_status()))
         self.print_pools()
-        print("ASSIGNABLE POOL POINTS:" + self.assignable_points())
+        print("ASSIGNABLE POOL POINTS:\t" + str(self.assignable_points()))
         print("SKILLS: ")
         self.print_skills()
         print("ITEMS: ")

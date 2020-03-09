@@ -135,7 +135,7 @@ class NumeneraPC(CypherPC):
         self._descriptor = random.choice(descriptor_list())
         self._type = random.choice(type_list())
         self._focus = random.choice(focus_list())
-        # self._configure_character()
+        self._configure_character()
         if truly_random:
             for connection in self.connections():
                 if not isinstance(connection, str):
