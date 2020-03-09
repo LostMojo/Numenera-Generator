@@ -18,6 +18,9 @@ class CypherPC:
     _assignable_points = 6
     _assigned_points = [0, 0, 0]
     _other_pool_bonuses = [0, 0, 0]
+    _assignable_edge_points = 0
+
+    _weapons = []
 
     _cypher_limit = 1
     _cyphers = {}
@@ -137,6 +140,8 @@ class CypherPC:
     def max_might(self): return self.max_pools()[self.which_stat("might")]
     def max_speed(self): return self.max_pools()[self.which_stat("speed")]
     def max_int(self): return self.max_pools()[self.which_stat("int")]
+    def assignable_points(self): return self._assignable_points
+    def assigned_points(self): return self._assigned_points
     def current_might(self): return self._current_pools[self.which_stat("might")]
     def current_speed(self): return self._current_pools[self.which_stat("speed")]
     def current_int(self): return self._current_pools[self.which_stat("int")]
@@ -159,6 +164,7 @@ class CypherPC:
             return "Dead"
 
     def which_stat(self, stat):
+        """A method that takes common names for might/speed/int or an index and returns the index of the right stat"""
         return self._stat_map[str(stat)]
 
     def _configure_character(self):
@@ -288,9 +294,16 @@ class CypherPC:
             stats[offset] = self.max_pools()[offset]
 
     def heal(self, amount, targeted_pool="int", beyond_max=False):
+        """
+        Heals an amount to a targeted pool
+        :param amount: the amount healed. Int
+        :param targeted_pool: The pool targeted, all lowercase, or the index. Str or Int
+        :param beyond_max: true if the healing can go beyond max pool. Bool
+        :return:
+        """
         stats = self.current_pools()
         offset = self.which_stat(targeted_pool)
-        if beyond_max or (stats[offset] + amount) < self._max_might:
+        if beyond_max or (stats[offset] + amount) < self.max_pools()[offset]:
             stats[offset] += amount
         else:
             stats[offset] = self.max_pools()[offset]
@@ -312,6 +325,12 @@ class CypherPC:
         self._exp -= amount
 
     def level_up(self, choice):
+        """
+        Spends 4 exp to level up, and chooses 1 from the lvl up choices. After 4 choices, the tier goes up.
+        Incomplete.
+        :param choice: The level up choice chosen
+        :return:
+        """
         self.spend_exp(4)
         if choice in range(0,3):
             self._advancement_choices_taken += self._advancement_choices[choice]
@@ -323,6 +342,10 @@ class CypherPC:
             self._advancement_choices_taken = []
 
     def advance_tier(self):
+        """
+        Advances Tier, unlocking new abilities
+        Incomplete.
+        """
         self._tier += 1
 
     def _reset_character(self):
@@ -332,6 +355,7 @@ class CypherPC:
         print("NAME: \t" + str(self.name()))
         print("STATUS:\t" + str(self.damage_status()))
         self.print_pools()
+        print("ASSIGNABLE POOL POINTS:" + self.assignable_points())
         print("SKILLS: ")
         self.print_skills()
         print("ITEMS: ")

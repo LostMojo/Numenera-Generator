@@ -56,6 +56,7 @@ class NumeneraPC(CypherPC):
     def iotum(self): return self._items["Iotum"]
 
     def _configure_character(self):
+        """A method to call to make sure the data matches up with the existing descriptor/type/focus"""
         self._connections = []
         self.new_type(self.type())
         self.new_descriptor(self.descriptor())
@@ -130,6 +131,7 @@ class NumeneraPC(CypherPC):
             # no support for over-levelling
 
     def randomize_character(self, truly_random=False):
+        """Randomizes Descriptor/Type/Focus, and if "Truly Random" will also make choices regarding connections"""
         self._descriptor = random.choice(descriptor_list())
         self._type = random.choice(type_list())
         self._focus = random.choice(focus_list())

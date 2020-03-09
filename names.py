@@ -27,6 +27,8 @@ class NameFile:
         self.masc_names, self.femme_names, self.neutral_names, self.last_names = get_names(filename)
 
     def rand_name(self, gender='a'):
+        """A method to return a random name. Genders of names are (M)asculine, (F)eminine, or (N)eutral.
+        Anything else chooses from all three categories"""
         if gender.capitalize() == 'M':
             return random.choice(self.masc_names)
         elif gender.capitalize() == 'F':
