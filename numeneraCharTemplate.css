@@ -1,0 +1,243 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+:root {
+  /* colors */
+  --primary: rgb(151, 191, 193);
+  --trans-prime: rgb(151, 191, 193, .2);
+  --accent: rgb(149, 56, 136);
+  --trans-accent: rgb(149, 56, 136, .3);
+  --secondary: rgb(63, 107, 156);
+  --trans-sec: rgb(63, 107, 156, .3);
+  --bg: #121212;
+  --lighter-bg: #2B2B2B;
+  --error: #CF6679;
+  --on-primary: black;
+  --on-secondary: black;
+  --on-bg: white;
+  --faded-text: #BFBFBF;
+  
+  /*sizes*/
+  --big-number: 1.5em;
+  --rounded: 5em;
+  
+}
+
+/* || General Styles*/
+
+body {
+  min-width: 290px;
+  background: var(--bg);
+  color: var(--on-bg);
+ /* font-family: 'Open Sans', sans-serif; */
+  font-family: 'Ubuntu Mono', monospace;
+  padding: 0px 10px 10px 10px;
+}
+
+div{
+  border: 0px solid var(--error);
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  background: var(--bg);
+  color: var(--on-bg)
+}
+
+button {
+  font-family: 'Ubuntu Mono', monospace;
+  background: transparent;
+  border: none !important;
+  color: var(--on-bg);
+  padding: 0px;
+}
+
+h2 {
+  /*font-family: 'Ubuntu Mono', monospace;*/
+  font-family: 'Cinzel', serif;
+  text-transform: lowercase;
+}
+
+h3 {
+  font-family: 'Cinzel', serif;
+  text-transform: lowercase;
+}
+
+.box-title {
+  margin: 0px 10px 8px 10px;
+}
+
+.box{
+  background: var(--trans-prime);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.fill-in-space {
+  width: 100%;
+  height: auto;
+}
+
+/* ||Header */
+
+header {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  text-align: left;
+  font-size: 1.8em;
+  background: var(--lighter-bg);
+  /*background-image: linear-gradient(to right, var(--trans-sec), var(--trans-accent));*/
+  margin: 0px 20px 10px 20px;
+  border-radius: 20px;
+  font-family: 'Cinzel', serif;
+}
+
+header h1 {
+  margin: 10px 5% 10px 5%;
+}
+
+#is-a {
+  margin: 10px 10% 10px 10%;
+}
+
+#character-desc {
+  margin: 0px 5% 0px 5%;
+}
+
+/* || Body Organization */
+
+#info-grid {
+  text-align: center;
+  display: grid;
+  grid-gap: 10px;
+  max-width: 2800px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: auto;
+}
+
+.lil-column {
+  display: grid;
+  text-align: center;
+  grid-gap: 8px;
+  grid-template-rows: min-content repeat(auto-fit, minmax(min-content, 1fr));
+}
+
+/* || Stat Pools */
+
+#pool-grid {
+  /*background: var(--lighter-bg); */
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.pool-button {
+  text-align: center;
+  background: var(--lighter-bg);
+  margin: 3px;
+  border-radius: 25px;
+}
+
+.pool-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin: 10px;
+}
+
+.pool-name {
+  text-align: center;
+  font-size: 2em;
+}
+
+.pool {
+  font-size: var(--big-number);
+}
+
+/* || Individual Boxes */
+
+#basic-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+}
+
+#damage-track {
+  max-height: 4em;
+}
+
+/* || Skills */
+
+#skills ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px 5px;
+  text-align: left;
+  grid-gap: 0px;
+}
+
+#skills li {
+  padding: 5px;
+}
+
+#skills li:nth-child(n+3) {
+  border-top: 1px solid white;
+}
+
+#skills li:nth-child(even) {
+  border-left: 1px solid white;
+}
+
+/* || Recovery Box */
+
+#recovery {
+  display: grid;
+  grid-template-columns: minmax(min-content, 1fr) 2fr;
+  align-items: center;
+}
+
+#recovery-checks {
+  display: grid;
+  text-align: left;
+  grid-gap: 5px;
+  padding: 5px;
+  border: 1px solid var(--faded-text);
+  border-radius: 0 5em 5em 0;
+  background: var(--trans-sec)
+}
+
+#recovery h3 {
+  width: 5em;
+  height: 5em;
+  display: flex;
+  margin: 0 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--faded-text);
+  background: var(--bg);
+  border-radius: 100% 0 0 100%;
+  border-right: 0;
+}
+
+#cyphers div{
+  display: grid;
+  grid-template-columns: .5fr minmax(min-content, 0.2fr) 1fr;
+}
+
+#artifacts div {
+  display: grid;
+  grid-template-columns: .5fr minmax(min-content, 0.2fr) minmax(min-content, 0.2fr) 1fr ;
+}
+
+#advancement-checks div {
+  display: grid;
+  grid-template-columns: minmax(min-content, .1fr) 1fr;
+  text-align: left;
+  padding: 3px 10px;
+}
+
+#notes {
+  grid-column: 1/-1;
+} 

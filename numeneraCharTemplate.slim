@@ -1,0 +1,121 @@
+doctype html
+
+html
+
+  head
+    title Numenera Character Template Sheet
+    link[href="numeneraCharTemplate.css" rel="stylesheet"]
+    meta[charset='utf-8']
+
+  nav#navbar
+    ul#nav-list
+
+  form
+    header
+      h1 Character Name
+      p#is-a is a 
+      p#character-desc Mischevious Jack who Rides The Lightning
+
+    body
+      div#info-grid
+        div 
+          section#basic-info 
+              div Tier 1
+              div Effort 1
+              div EXP 0
+          section#pool-grid
+            - for attr in [ "Might", "Speed", "Intellect"] do
+                button.pool-button[type="button" name="#{attr}-button"]
+                  div.pool-display
+                    h2.pool-name #{attr}
+                    div.pool-data
+                      div.pool
+                        p 10/12
+                      div.edge
+                        p #{attr} Edge: 1
+
+        div.lil-column
+          section.box#damage-track
+            h3.box-title damage track
+            div
+              - for damage in [ "Hale", "Impaired", "Debilitated", "Dead"] do
+                input[type="radio" id="#{damage}" name="damage-track-position" value="#{damage}"] #{damage}
+
+          section.box#conditions
+            h3 Conditions
+
+          section.box#skills
+            h2 Skills
+            ul 
+              li skill name :
+              li inability/trained/specialized
+              li Understanding Numenera
+              li Trained
+
+        section.box#armor
+          h3.box-title Armor
+          div
+            h4 physical armor: 3
+            p 2 speed cost
+          h3 additional armor
+
+        section.box#attacks
+          h2 Attacks
+          p Weapon
+          p Diff. Mod
+          p Damage
+
+        section
+          h2.box-title Recovery
+          div#recovery 
+            h3 1d6 + 1
+            div#recovery-checks
+              - for time in ["1 action", "10 minutes", "1 hour", "10 hours"] do
+                div
+                  input[type="checkbox" id="#{time}", name="recovery-slot-used" value="#{time}"]
+                    label[for="#{time}"] #{time}
+
+        section.box
+          h2 Special Abilities
+          p name
+          p ability data
+
+        section.box#cyphers
+          h2 Cyphers
+          div
+            p Name
+            p level
+            p Description and Use
+
+        section.box#artifacts
+          h2 Artifacts
+          div
+            p name
+            p level
+            p breaks
+            p data
+
+        section.box#equipment
+          h2 Equipment
+          p just a text area
+
+        section.box#background
+          h2 Background
+          p just a text area
+
+        section.box#advance
+          h2 Advancement
+          div#advancement-checks
+            -for advancement in ["+4 points to pools", "+1 to Edge of Your Choice", "+1 Effort", "Train or Specialize in a Skill"]
+              div
+                input[type="checkbox" id="#{advancement}", name="advancement-chosen" value="#{advancement}"]
+                label[for="#{advancement}"] #{advancement}
+
+        section.box#connections
+          h2 Connections
+
+        section.box#notes
+          h2 Notes
+          p just a text area
+
+
